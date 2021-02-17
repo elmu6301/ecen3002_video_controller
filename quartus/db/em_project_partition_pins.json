@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "vert_sync",
+					"strict" : false
+				},
+				{
 					"name" : "horz_count[0]",
 					"strict" : false
 				},

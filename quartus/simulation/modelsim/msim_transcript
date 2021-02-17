@@ -21,50 +21,50 @@
 # 
 # vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:41:03 on Feb 16,2021
+# Start time: 11:27:31 on Feb 17,2021
 # vlog -reportprogress 300 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo 
 # -- Compiling module refresh_pll
 # 
 # Top level modules:
 # 	refresh_pll
-# End time: 20:41:03 on Feb 16,2021, Elapsed time: 0:00:00
+# End time: 11:27:31 on Feb 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:41:03 on Feb 16,2021
+# Start time: 11:27:31 on Feb 17,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
 # -- Compiling module vtc
 # 
 # Top level modules:
 # 	vtc
-# End time: 20:41:03 on Feb 16,2021, Elapsed time: 0:00:00
+# End time: 11:27:31 on Feb 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:41:04 on Feb 16,2021
+# Start time: 11:27:31 on Feb 17,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv 
 # -- Compiling module em_project
 # 
 # Top level modules:
 # 	em_project
-# End time: 20:41:04 on Feb 16,2021, Elapsed time: 0:00:00
+# End time: 11:27:32 on Feb 17,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:41:04 on Feb 16,2021
+# Start time: 11:27:32 on Feb 17,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src" C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 20:41:04 on Feb 16,2021, Elapsed time: 0:00:00
+# End time: 11:27:32 on Feb 17,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 20:41:04 on Feb 16,2021
+# Start time: 11:27:32 on Feb 17,2021
 # Loading sv_std.std
 # Loading work.tb
 # Loading work.em_project
@@ -123,5 +123,3 @@
 # ** Note: $stop    : C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv(36)
 #    Time: 50000100 ns  Iteration: 0  Instance: /tb
 # Break in Module tb at C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv line 36
-# End time: 20:46:16 on Feb 16,2021, Elapsed time: 0:05:12
-# Errors: 0, Warnings: 22

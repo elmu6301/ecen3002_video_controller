@@ -8,7 +8,6 @@
 module vtc(
     input rfr_clk, 
     input reset_n,
-    // input reset_p,
 
     output h_sync,
     output [11:0] h_count, 
@@ -45,8 +44,7 @@ assign v_sync = v_pulse;
 always_ff @ (posedge rfr_clk, negedge reset_n)//posedge reset_p) 
 	begin 
 		//Reset logic
-		if(reset_n == 1'b0) begin //reset counter if button is hit  
-        // if(reset_p == 1'b1) begin //reset counter if button is hit  
+		if(reset_n == 1'b0) begin //reset counter if button is hit   
             //Reset horizontal 
             p_ctr <= 0; 
             video_on_h <= 1;
@@ -85,21 +83,17 @@ always_ff @ (posedge rfr_clk, negedge reset_n)//posedge reset_p)
             case (l_ctr)
                 720: begin //Beginning of front porch -> Turn off the video (now off screen)
                     video_on_v <= 0; 
-                    // l_ctr <= l_ctr + 1; 
                 end
                 725: begin //Begining of sync pulse -> Turn on the sync pulse
                     v_pulse <= 1; 
-                    // l_ctr <= l_ctr + 1; 
                 end
                 730: begin //Beginning of back porch -> Turn off the sync pulse
                     v_pulse <= 0; 
-                    // l_ctr <= l_ctr + 1; 
                 end
                 750: begin //End of screen -> Reset to left side of the screen
                     l_ctr <= 0; 
                     video_on_v <= 1;
                 end
-                // default:  l_ctr <= l_ctr + 1; 
             endcase
         end
 	end

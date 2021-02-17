@@ -122,7 +122,7 @@ logic video_on;
 
 //Inputs
 assign reset_p = 1'b0; //~KEY[0]; //active high
-assign reset_n = KEY[0]; //active low
+assign reset_n = KEY[0] & locked; //active low + wait till the pll is going before running
 
 //PLL Test outputs 
 assign reset_P = reset_p; 
@@ -157,7 +157,6 @@ vtc VGA_VTC(.rfr_clk(rfr_clk),
 //=======================================================
 //  Structural coding
 //=======================================================
-
 
 
 endmodule
