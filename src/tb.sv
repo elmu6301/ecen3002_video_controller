@@ -20,11 +20,11 @@ logic VGA_CLK;
 logic VGA_HS, VGA_VS; 
 
 
-logic pll_clk, reset_P, pll_locked; 
-logic [11:0] horz_count, vert_count; 
-logic horz_sync, vert_sync, v_on; 
+// logic pll_clk, reset_P, pll_locked; 
+// logic [11:0] horz_count, vert_count; 
+// logic horz_sync, vert_sync, v_on; 
 
-// logic [9:0] LEDR;
+logic [9:0] LEDR;
 // logic [9:0] SW;
 
 //Device Declaration

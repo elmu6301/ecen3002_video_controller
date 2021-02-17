@@ -18,7 +18,7 @@ module em_project(
 	// input 		     [9:0]		SW,
 
 	// //////////// LED //////////
-	// output		     [9:0]		LEDR //,
+	output		     [9:0]		LEDR,
 
 	// //////////// Seg7 //////////
 	// output		     [6:0]		HEX0,
@@ -56,7 +56,7 @@ module em_project(
 	output		          		VGA_HS,
 	output		     [7:0]		VGA_R,
 	output		          		VGA_SYNC_N,
-	output		          		VGA_VS//,
+	output		          		VGA_VS //,
 
 	// //////////// Audio //////////
 	// input 		          		AUD_ADCDAT,
@@ -138,12 +138,11 @@ assign VGA_R = red;
 assign VGA_G = green; 
 assign VGA_B = blue; 
 
+assign red = 255 & {8{video_on}}; 
+assign green = 255  & {8{video_on}}; 
+assign blue = 255 & {8{video_on}}; 
 
-
-assign red = 0; 
-assign green = 223; 
-assign blue = 247; 
-
+assign LEDR[7:0] = line_count[11:4];  
 
 //PLL Test outputs 
 // assign reset_P = reset_p; 

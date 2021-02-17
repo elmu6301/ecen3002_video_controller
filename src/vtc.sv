@@ -41,7 +41,7 @@ assign v_sync = v_pulse;
 //=======================================================
 
 //Trigger on the positive edge of the clock and the reset 
-always_ff @ (posedge rfr_clk, negedge reset_n)//posedge reset_p) 
+always_ff @ (posedge rfr_clk, negedge reset_n) 
 	begin 
 		//Reset logic
 		if(reset_n == 1'b0) begin //reset counter if button is hit   
@@ -59,19 +59,19 @@ always_ff @ (posedge rfr_clk, negedge reset_n)//posedge reset_p)
 		
             //Horizontal Logic
             case (p_ctr)
-                1280: begin //Beginning of front porch -> Turn off the video (now off screen)
+                1279: begin //Beginning of front porch -> Turn off the video (now off screen)
                     video_on_h <= 0; 
                     p_ctr <= p_ctr + 1; 
                 end
-                1390: begin //Begining of sync pulse -> Turn on the sync pulse
+                1389: begin //Begining of sync pulse -> Turn on the sync pulse
                     h_pulse <= 1; 
                     p_ctr <= p_ctr + 1; 
                 end
-                1430: begin //Beginning of back porch -> Turn off the sync pulse
+                1429: begin //Beginning of back porch -> Turn off the sync pulse
                     h_pulse <= 0; 
                     p_ctr <= p_ctr + 1; 
                 end
-                1650: begin //End of screen -> Reset to left side of the screen
+                1649: begin //End of screen -> Reset to left side of the screen
                     p_ctr <= 0; 
                     video_on_h <= 1;
                     l_ctr <= l_ctr + 1; //increment the line counter
@@ -81,13 +81,13 @@ always_ff @ (posedge rfr_clk, negedge reset_n)//posedge reset_p)
 
             //Vertical Logic
             case (l_ctr)
-                720: begin //Beginning of front porch -> Turn off the video (now off screen)
+                719: begin //Beginning of front porch -> Turn off the video (now off screen)
                     video_on_v <= 0; 
                 end
-                725: begin //Begining of sync pulse -> Turn on the sync pulse
+                724: begin //Begining of sync pulse -> Turn on the sync pulse
                     v_pulse <= 1; 
                 end
-                730: begin //Beginning of back porch -> Turn off the sync pulse
+                729: begin //Beginning of back porch -> Turn off the sync pulse
                     v_pulse <= 0; 
                 end
                 750: begin //End of screen -> Reset to left side of the screen

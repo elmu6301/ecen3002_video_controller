@@ -1,5 +1,5 @@
 Archive Project report for em_project
-Mon Feb 15 10:35:28 2021
+Wed Feb 17 13:41:44 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Mon Feb 15 10:35:28 2021 ;
+; Archive Project Status ; Successful - Wed Feb 17 13:41:44 2021 ;
 ; Revision Name          ; em_project                            ;
 ; Top-level Entity Name  ; em_project                            ;
 ; Family                 ; Cyclone V                             ;
@@ -54,16 +54,16 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory C:/Users/elena/Documents/quartus_workspace/em_project/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_02_15_2021.qar'
+Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_02_17_2021.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'em_project.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Mon Feb 15 10:35:28 2021
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Wed Feb 17 13:41:44 2021
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +-------------------------------------------------------------------------+
