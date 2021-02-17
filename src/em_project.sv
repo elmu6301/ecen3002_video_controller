@@ -49,14 +49,14 @@ module em_project(
 	// input 		          		TD_VS,
 
 	// //////////// VGA //////////
-	// output		          		VGA_BLANK_N,
-	// output		     [7:0]		VGA_B,
-	// output		          		VGA_CLK,
-	// output		     [7:0]		VGA_G,
-	// output		          		VGA_HS,
-	// output		     [7:0]		VGA_R,
-	// output		          		VGA_SYNC_N,
-	// output		          		VGA_VS,
+	output		          		VGA_BLANK_N,
+	output		     [7:0]		VGA_B,
+	output		          		VGA_CLK,
+	output		     [7:0]		VGA_G,
+	output		          		VGA_HS,
+	output		     [7:0]		VGA_R,
+	output		          		VGA_SYNC_N,
+	output		          		VGA_VS//,
 
 	// //////////// Audio //////////
 	// input 		          		AUD_ADCDAT,
@@ -87,14 +87,14 @@ module em_project(
 	// output		          		IRDA_TXD
 
 	// //////////// TEST OUTPUTS //////////
-	output                          pll_clk, 
-	output 							pll_locked, 
-	output                          horz_sync, 
-	output                          vert_sync,
-	output 							[11:0] horz_count,
-	output 							[11:0] vert_count,
-	output							v_on,
-	output                          reset_P
+	// output                          pll_clk, 
+	// output 							pll_locked, 
+	// output                          horz_sync, 
+	// output                          vert_sync,
+	// output 							[11:0] horz_count,
+	// output 							[11:0] vert_count,
+	// output							v_on,
+	// output                          reset_P
 );
 
 
@@ -115,26 +115,47 @@ logic v_sync;
 logic [11:0] line_count; 
 logic video_on; 
 
+//Pixel Generator output lines
+logic [7:0] red, green, blue; 
+
 
 //=======================================================
 //  Assignment declarations
 //=======================================================
 
-//Inputs
+//Resets
 assign reset_p = 1'b0; //~KEY[0]; //active high
 assign reset_n = KEY[0] & locked; //active low + wait till the pll is going before running
 
-//PLL Test outputs 
-assign reset_P = reset_p; 
-assign pll_clk = rfr_clk; 
-assign pll_locked = locked; 
+//VGA assignments
+assign VGA_BLANK_N = 1'b1; 
+assign VGA_SYNC_N = 1'b0; 
+assign VGA_CLK = rfr_clk; 
+assign VGA_HS = h_sync; 
+assign VGA_VS = v_sync; 
 
-//VTC Test outputs
-assign horz_sync = h_sync; 
-assign vert_sync = v_sync; 
-assign horz_count = pixel_count; 
-assign vert_count = line_count; 
-assign v_on = video_on; 
+assign VGA_R = red; 
+assign VGA_G = green; 
+assign VGA_B = blue; 
+
+
+
+assign red = 0; 
+assign green = 223; 
+assign blue = 247; 
+
+
+//PLL Test outputs 
+// assign reset_P = reset_p; 
+// assign pll_clk = rfr_clk; 
+// assign pll_locked = locked; 
+
+// //VTC Test outputs
+// assign horz_sync = h_sync; 
+// assign vert_sync = v_sync; 
+// assign horz_count = pixel_count; 
+// assign vert_count = line_count; 
+// assign v_on = video_on; 
 
 
 //=======================================================

@@ -4,111 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "horz_sync",
+					"name" : "VGA_HS",
 					"strict" : false
 				},
 				{
-					"name" : "vert_sync",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[0]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[1]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[2]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[3]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[4]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[5]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[6]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[7]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[8]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[9]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[10]",
-					"strict" : false
-				},
-				{
-					"name" : "horz_count[11]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[0]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[1]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[2]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[3]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[4]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[5]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[6]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[7]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[8]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[9]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[10]",
-					"strict" : false
-				},
-				{
-					"name" : "vert_count[11]",
-					"strict" : false
-				},
-				{
-					"name" : "v_on",
+					"name" : "VGA_VS",
 					"strict" : false
 				},
 				{

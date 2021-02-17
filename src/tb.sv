@@ -13,6 +13,13 @@ module tb();
 //Port Definitions
 logic CLOCK_50; 
 logic [3:0]	KEY; 
+
+logic VGA_BLANK_N,VGA_SYNC_N; 
+logic [7:0] VGA_R, VGA_G, VGA_B; 
+logic VGA_CLK; 
+logic VGA_HS, VGA_VS; 
+
+
 logic pll_clk, reset_P, pll_locked; 
 logic [11:0] horz_count, vert_count; 
 logic horz_sync, vert_sync, v_on; 

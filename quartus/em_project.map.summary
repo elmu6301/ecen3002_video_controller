@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Feb 17 11:26:17 2021
+Analysis & Synthesis Status : Successful - Wed Feb 17 11:44:39 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 Revision Name : em_project
 Top-level Entity Name : em_project
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 28
-Total pins : 35
+Total registers : 26
+Total pins : 34
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
