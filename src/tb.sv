@@ -1,0 +1,40 @@
+/*
+    ECEN 3002
+    Video Project: testbench
+    Elena Murray
+
+*/
+
+`timescale 1 ns/100 ps
+
+//Module Declaration
+module tb(); 
+
+//Port Definitions
+logic CLOCK_50; 
+logic [3:0]	KEY; 
+logic pll_clk, reset_P, pll_locked; 
+logic [11:0] horz_count, vert_count; 
+logic horz_sync, vert_sync, v_on; 
+
+// logic [9:0] LEDR;
+// logic [9:0] SW;
+
+//Device Declaration
+em_project DUT(.*); 
+
+//Simulation
+always # 10 CLOCK_50 = ~CLOCK_50; 
+
+initial begin
+    //Set up inital values to all inputs
+    CLOCK_50 = 1'b1; 
+    KEY = 4'b0000;
+    #100 KEY = 4'b1111; 
+    #50_000_000
+    // #100_000_000 
+    $stop; 
+end
+
+
+endmodule

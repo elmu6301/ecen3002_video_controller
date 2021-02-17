@@ -1,0 +1,99 @@
+Archive Project report for em_project
+Mon Feb 15 10:35:28 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Mon Feb 15 10:35:28 2021 ;
+; Revision Name          ; em_project                            ;
+; Top-level Entity Name  ; em_project                            ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/elena/Documents/quartus_workspace/em_project/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_02_15_2021.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'em_project.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Mon Feb 15 10:35:28 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:12
+
+
++-------------------------------------------------------------------------+
+; Files Archived                                                          ;
++-------------------------------------------------------------------------+
+; File Name                                                               ;
++-------------------------------------------------------------------------+
+; ../src/em_project.sv                                                    ;
+; ../src/pixel_gen.sv                                                     ;
+; ../src/reset.sv                                                         ;
+; ../src/tb.sv                                                            ;
+; ../src/vtc.sv                                                           ;
+; C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv ;
+; C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv  ;
+; C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv      ;
+; C:/Users/elena/Documents/quartus_workspace/em_project/src/tb.sv         ;
+; C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv        ;
+; em_project.qpf                                                          ;
+; em_project.qsf                                                          ;
+; em_project.SDC                                                          ;
+; em_project.sdc                                                          ;
+; em_project_assignment_defaults.qdf                                      ;
+; refresh_pll.cmp                                                         ;
+; refresh_pll.qip                                                         ;
+; refresh_pll.sip                                                         ;
+; refresh_pll.spd                                                         ;
+; refresh_pll.v                                                           ;
+; refresh_pll/refresh_pll_0002.qip                                        ;
+; refresh_pll/refresh_pll_0002.v                                          ;
+; refresh_pll_sim/refresh_pll.vo                                          ;
++-------------------------------------------------------------------------+
+
+

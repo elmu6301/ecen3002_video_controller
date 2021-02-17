@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at em_project.sv(97): object "reset_P" differs only in case from object "reset_p" in the same scope File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 97

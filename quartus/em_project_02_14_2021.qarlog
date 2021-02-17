@@ -1,0 +1,29 @@
+Quartus Prime Archive log --	C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_02_14_2021.qarlog
+
+Archive:	C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_02_14_2021.qar
+Date:		Sun Feb 14 16:43:42 2021
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Standard Edition
+
+	=========== Files Selected: ===========
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project.SDC
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project.qpf
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project.qsf
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project.sdc
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_assignment_defaults.qdf
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll.cmp
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll.qip
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll.sip
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll.spd
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll.v
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll/refresh_pll_0002.qip
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll/refresh_pll_0002.v
+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo
+C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv
+C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv
+C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv
+C:/Users/elena/Documents/quartus_workspace/em_project/src/tb.sv
+C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
