@@ -1,5 +1,5 @@
 Analysis & Synthesis report for em_project
-Wed Feb 17 17:12:19 2021
+Wed Feb 17 17:31:06 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -21,10 +21,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
  13. Parameter Settings for User Entity Instance: refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i
  14. Parameter Settings for Inferred Entity Instance: pixel_gen:PIXEL_GEN|lpm_divide:Mod0
  15. Port Connectivity Checks: "refresh_pll:REFRESH_PLL_CLK"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+ 16. Port Connectivity Checks: "reset:RESET"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,13 +52,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Feb 17 17:12:19 2021           ;
+; Analysis & Synthesis Status     ; Successful - Wed Feb 17 17:31:06 2021           ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                   ; em_project                                      ;
 ; Top-level Entity Name           ; em_project                                      ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 41                                              ;
+; Total registers                 ; 44                                              ;
 ; Total pins                      ; 44                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -182,6 +183,7 @@ https://fpgasoftware.intel.com/eula.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library     ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+-------------+
 ; ../src/vtc.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv                             ;             ;
+; ../src/reset.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv                           ;             ;
 ; ../src/pixel_gen.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv                       ;             ;
 ; ../src/em_project.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv                      ;             ;
 ; refresh_pll.v                    ; yes             ; User Wizard-Generated File   ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll.v                  ; refresh_pll ;
@@ -204,14 +206,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------------------------------------------------------------------------------------------------+
 ; Estimate of Logic utilization (ALMs needed) ; 105                                                                                                  ;
 ;                                             ;                                                                                                      ;
-; Combinational ALUT usage for logic          ; 196                                                                                                  ;
-;     -- 7 input functions                    ; 0                                                                                                    ;
-;     -- 6 input functions                    ; 14                                                                                                   ;
+; Combinational ALUT usage for logic          ; 195                                                                                                  ;
+;     -- 7 input functions                    ; 1                                                                                                    ;
+;     -- 6 input functions                    ; 13                                                                                                   ;
 ;     -- 5 input functions                    ; 5                                                                                                    ;
 ;     -- 4 input functions                    ; 35                                                                                                   ;
-;     -- <=3 input functions                  ; 142                                                                                                  ;
+;     -- <=3 input functions                  ; 141                                                                                                  ;
 ;                                             ;                                                                                                      ;
-; Dedicated logic registers                   ; 41                                                                                                   ;
+; Dedicated logic registers                   ; 44                                                                                                   ;
 ;                                             ;                                                                                                      ;
 ; I/O pins                                    ; 44                                                                                                   ;
 ;                                             ;                                                                                                      ;
@@ -221,9 +223,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                                    ;
 ;                                             ;                                                                                                      ;
 ; Maximum fan-out node                        ; refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 45                                                                                                   ;
-; Total fan-out                               ; 830                                                                                                  ;
-; Average fan-out                             ; 2.55                                                                                                 ;
+; Maximum fan-out                             ; 47                                                                                                   ;
+; Total fan-out                               ; 833                                                                                                  ;
+; Average fan-out                             ; 2.54                                                                                                 ;
 +---------------------------------------------+------------------------------------------------------------------------------------------------------+
 
 
@@ -232,8 +234,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |em_project                               ; 196 (1)             ; 41 (0)                    ; 0                 ; 0          ; 44   ; 0            ; |em_project                                                                                                                     ; em_project          ; work         ;
-;    |pixel_gen:PIXEL_GEN|                  ; 133 (35)            ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN                                                                                                 ; pixel_gen           ; work         ;
+; |em_project                               ; 195 (1)             ; 44 (0)                    ; 0                 ; 0          ; 44   ; 0            ; |em_project                                                                                                                     ; em_project          ; work         ;
+;    |pixel_gen:PIXEL_GEN|                  ; 132 (34)            ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN                                                                                                 ; pixel_gen           ; work         ;
 ;       |lpm_divide:Mod0|                   ; 98 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;          |lpm_divide_m3m:auto_generated|  ; 98 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0|lpm_divide_m3m:auto_generated                                                   ; lpm_divide_m3m      ; work         ;
 ;             |sign_div_unsign_plh:divider| ; 98 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0|lpm_divide_m3m:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh ; work         ;
@@ -241,6 +243,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |refresh_pll:REFRESH_PLL_CLK|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK                                                                                         ; refresh_pll         ; refresh_pll  ;
 ;       |refresh_pll_0002:refresh_pll_inst| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst                                                       ; refresh_pll_0002    ; refresh_pll  ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i                               ; altera_pll          ; work         ;
+;    |reset:RESET|                          ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|reset:RESET                                                                                                         ; reset               ; work         ;
 ;    |vtc:VGA_VTC|                          ; 62 (62)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |em_project|vtc:VGA_VTC                                                                                                         ; vtc                 ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -275,10 +278,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 41    ;
+; Total registers                              ; 44    ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Clear ; 35    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
@@ -584,29 +587,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------+
 
 
++-----------------------------------------+
+; Port Connectivity Checks: "reset:RESET" ;
++------+-------+----------+---------------+
+; Port ; Type  ; Severity ; Details       ;
++------+-------+----------+---------------+
+; lock ; Input ; Info     ; Stuck at VCC  ;
++------+-------+----------+---------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 41                          ;
-;     CLR               ; 20                          ;
+; arriav_ff             ; 44                          ;
+;     CLR               ; 23                          ;
 ;     ENA               ; 9                           ;
 ;     ENA CLR SCLR      ; 12                          ;
-; arriav_lcell_comb     ; 198                         ;
+; arriav_lcell_comb     ; 197                         ;
 ;     arith             ; 74                          ;
 ;         0 data inputs ; 10                          ;
 ;         1 data inputs ; 29                          ;
 ;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 20                          ;
 ;         4 data inputs ; 12                          ;
-;     normal            ; 116                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 114                         ;
 ;         0 data inputs ; 2                           ;
-;         2 data inputs ; 35                          ;
+;         2 data inputs ; 34                          ;
 ;         3 data inputs ; 37                          ;
 ;         4 data inputs ; 23                          ;
 ;         5 data inputs ; 5                           ;
-;         6 data inputs ; 14                          ;
+;         6 data inputs ; 13                          ;
 ;     shared            ; 8                           ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
@@ -614,7 +628,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 13.60                       ;
-; Average LUT depth     ; 8.08                        ;
+; Average LUT depth     ; 7.99                        ;
 +-----------------------+-----------------------------+
 
 
@@ -633,7 +647,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Wed Feb 17 17:11:57 2021
+    Info: Processing started: Wed Feb 17 17:30:43 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off em_project -c em_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -641,7 +655,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: vtc File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file /users/elena/documents/quartus_workspace/em_project/src/tb.sv
     Info (12023): Found entity 1: tb File: C:/Users/elena/Documents/quartus_workspace/em_project/src/tb.sv Line: 11
-Info (12021): Found 0 design units, including 0 entities, in source file /users/elena/documents/quartus_workspace/em_project/src/reset.sv
+Info (12021): Found 1 design units, including 1 entities, in source file /users/elena/documents/quartus_workspace/em_project/src/reset.sv
+    Info (12023): Found entity 1: reset File: C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file /users/elena/documents/quartus_workspace/em_project/src/pixel_gen.sv
     Info (12023): Found entity 1: pixel_gen File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file /users/elena/documents/quartus_workspace/em_project/src/em_project.sv
@@ -651,7 +666,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file refresh
 Info (12021): Found 1 design units, including 1 entities, in source file refresh_pll/refresh_pll_0002.v
     Info (12023): Found entity 1: refresh_pll_0002 File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll/refresh_pll_0002.v Line: 2
 Info (12127): Elaborating entity "em_project" for the top level hierarchy
-Info (12128): Elaborating entity "refresh_pll" for hierarchy "refresh_pll:REFRESH_PLL_CLK" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 166
+Warning (10034): Output port "LEDR" at em_project.sv(21) has no driver File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
+Info (12128): Elaborating entity "reset" for hierarchy "reset:RESET" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 167
+Info (12128): Elaborating entity "refresh_pll" for hierarchy "refresh_pll:REFRESH_PLL_CLK" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 170
 Info (12128): Elaborating entity "refresh_pll_0002" for hierarchy "refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll.v Line: 20
 Info (12128): Elaborating entity "altera_pll" for hierarchy "refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll/refresh_pll_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -717,13 +734,13 @@ Info (12133): Instantiated megafunction "refresh_pll:REFRESH_PLL_CLK|refresh_pll
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "vtc" for hierarchy "vtc:VGA_VTC" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 176
+Info (12128): Elaborating entity "vtc" for hierarchy "vtc:VGA_VTC" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 180
 Warning (10230): Verilog HDL assignment warning at vtc.sv(64): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 64
 Warning (10230): Verilog HDL assignment warning at vtc.sv(68): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 68
 Warning (10230): Verilog HDL assignment warning at vtc.sv(72): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 72
 Warning (10230): Verilog HDL assignment warning at vtc.sv(77): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 77
 Warning (10230): Verilog HDL assignment warning at vtc.sv(79): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 79
-Info (12128): Elaborating entity "pixel_gen" for hierarchy "pixel_gen:PIXEL_GEN" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 188
+Info (12128): Elaborating entity "pixel_gen" for hierarchy "pixel_gen:PIXEL_GEN" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 192
 Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(56): truncated value with size 32 to match size of target (4) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 56
 Info (278001): Inferred 1 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixel_gen:PIXEL_GEN|Mod0" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 55
@@ -740,6 +757,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
     Info (12023): Found entity 1: alt_u_div_ove File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/alt_u_div_ove.tdf Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
     Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
     Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
     Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
@@ -758,16 +779,16 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 15
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 15
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 15
-Info (21057): Implemented 241 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 243 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 196 logic cells
+    Info (21061): Implemented 198 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Wed Feb 17 17:12:19 2021
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:39
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Wed Feb 17 17:31:06 2021
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:41
 
 
 +------------------------------------------+

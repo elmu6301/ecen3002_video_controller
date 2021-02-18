@@ -37,7 +37,7 @@ assign p_green = green  & {8{video_on}};
 assign p_blue = blue & {8{video_on}}; 
 
 //Test output
-assign bar = bar_cnt; 
+// assign bar = bar_cnt; 
 
 //=======================================================
 //  Structural coding

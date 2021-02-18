@@ -102,6 +102,8 @@ module em_project(
 //  REG/WIRE declarations
 //=======================================================
 
+//Reset trigger
+logic ext_reset_n; 
 //Reset output lines
 logic reset_p, reset_n;  
 
@@ -115,6 +117,7 @@ logic v_sync;
 logic [11:0] line_count; 
 logic video_on; 
 
+
 //Pixel Generator output lines
 logic [7:0] red, green, blue; 
 
@@ -126,7 +129,7 @@ logic [3:0] bar_cnt;
 
 //Resets
 assign reset_p = 1'b0; //active high for the pll
-assign reset_n = KEY[0] & locked; //active low + wait till the pll is going before running
+assign ext_reset_n = KEY[0] & locked; //active low + wait till the pll is going before running
 
 //VGA assignments
 assign VGA_BLANK_N = 1'b1; 
@@ -157,7 +160,12 @@ assign VGA_B = blue;
 //=======================================================
 
 //Reset Module
-
+reset RESET(.clock(rfr_clk),
+			.ext_reset_n(ext_reset_n),
+			.lock(1'b1), 
+			.reset_n(reset_n)
+			); 
+			
 //74.25 MHz Clock Module
 refresh_pll REFRESH_PLL_CLK(.refclk(CLOCK_50), .rst(reset_p), .outclk_0(rfr_clk), .locked(locked)); 
 
@@ -177,7 +185,7 @@ pixel_gen PIXEL_GEN(.rfr_clk(rfr_clk),
 					.video_on(video_on), 
 					.pixel_cnt(pixel_count),
 					.line_cnt(line_count),
-					.bar(bar_cnt),
+					// .bar(bar_cnt),
 					.p_red(red),
 					.p_green(green),
 					.p_blue(blue)
