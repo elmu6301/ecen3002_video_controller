@@ -1,19 +1,9 @@
 |em_project
 CLOCK_50 => CLOCK_50.IN1
-KEY[0] => ext_reset_n.IN1
-KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
-LEDR[0] <= <GND>
-LEDR[1] <= <GND>
-LEDR[2] <= <GND>
-LEDR[3] <= <GND>
-LEDR[4] <= <GND>
-LEDR[5] <= <GND>
-LEDR[6] <= <GND>
-LEDR[7] <= <GND>
-LEDR[8] <= <GND>
-LEDR[9] <= <GND>
+KEY[0] => ext_reset_n.IN0
+KEY[1] => ext_reset_n.IN1
+KEY[2] => ext_reset_n.IN1
+KEY[3] => ext_reset_n.IN1
 VGA_BLANK_N <= <VCC>
 VGA_B[0] <= pixel_gen:PIXEL_GEN.p_blue
 VGA_B[1] <= pixel_gen:PIXEL_GEN.p_blue

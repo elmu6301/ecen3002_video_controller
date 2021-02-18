@@ -18,7 +18,7 @@ module pixel_gen(
     output [7:0] p_blue 
     
 ); 
-
+`include "params.vh"
 
 //=======================================================
 //  REG/WIRE declarations
@@ -52,8 +52,8 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
 		if(reset_n == 1'b0) begin  
             bar_cnt = 0; 
         end else begin
-            if(pixel_cnt % 80 == 0 && pixel_cnt <= 1279) begin
-                bar_cnt <= (bar_cnt + 1) % 16; 
+            if(pixel_cnt % BAR_W == 0 && pixel_cnt <= H_F_PORCH) begin
+                bar_cnt <= (bar_cnt + 1) % BARS; 
                 case(bar_cnt)
                     0: begin
                         red <= 255;

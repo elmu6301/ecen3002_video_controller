@@ -18,7 +18,7 @@ module em_project(
 	// input 		     [9:0]		SW,
 
 	// //////////// LED //////////
-	output		     [9:0]		LEDR,
+	// output		     [9:0]		LEDR,
 
 	// //////////// Seg7 //////////
 	// output		     [6:0]		HEX0,
@@ -129,7 +129,7 @@ logic [3:0] bar_cnt;
 
 //Resets
 assign reset_p = 1'b0; //active high for the pll
-assign ext_reset_n = KEY[0] & locked; //active low + wait till the pll is going before running
+assign ext_reset_n = (KEY[0] | KEY[1] | KEY[2] | KEY[3]) & locked; //active low + wait till the pll is going before running
 
 //VGA assignments
 assign VGA_BLANK_N = 1'b1; 

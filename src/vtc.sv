@@ -15,7 +15,7 @@ module vtc(
     output [11:0] v_count,
     output video_on
 ); 
-
+`include "params.vh"
 
 //=======================================================
 //  REG/WIRE declarations
@@ -59,19 +59,19 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
 		
             //Horizontal Logic
             case (p_ctr)
-                1279: begin //Beginning of front porch -> Turn off the video (now off screen)
+                H_F_PORCH: begin //Beginning of front porch -> Turn off the video (now off screen)
                     video_on_h <= 0; 
                     p_ctr <= p_ctr + 1; 
                 end
-                1389: begin //Begining of sync pulse -> Turn on the sync pulse
+                H_S_PULSE: begin //Begining of sync pulse -> Turn on the sync pulse
                     h_pulse <= 1; 
                     p_ctr <= p_ctr + 1; 
                 end
-                1429: begin //Beginning of back porch -> Turn off the sync pulse
+                H_B_PORCH: begin //Beginning of back porch -> Turn off the sync pulse
                     h_pulse <= 0; 
                     p_ctr <= p_ctr + 1; 
                 end
-                1649: begin //End of screen -> Reset to left side of the screen
+                H_MAX_PIXEL: begin //End of screen -> Reset to left side of the screen
                     p_ctr <= 0; 
                     video_on_h <= 1;
                     l_ctr <= l_ctr + 1; //increment the line counter
@@ -81,16 +81,16 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
 
             //Vertical Logic
             case (l_ctr)
-                719: begin //Beginning of front porch -> Turn off the video (now off screen)
+                V_F_PORCH: begin //Beginning of front porch -> Turn off the video (now off screen)
                     video_on_v <= 0; 
                 end
-                724: begin //Begining of sync pulse -> Turn on the sync pulse
+                V_S_PULSE: begin //Begining of sync pulse -> Turn on the sync pulse
                     v_pulse <= 1; 
                 end
-                729: begin //Beginning of back porch -> Turn off the sync pulse
+                V_B_PORCH: begin //Beginning of back porch -> Turn off the sync pulse
                     v_pulse <= 0; 
                 end
-                750: begin //End of screen -> Reset to left side of the screen
+                V_MAX_LINE: begin //End of screen -> Reset to left side of the screen
                     l_ctr <= 0; 
                     video_on_v <= 1;
                 end
