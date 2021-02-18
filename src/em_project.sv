@@ -118,13 +118,14 @@ logic video_on;
 //Pixel Generator output lines
 logic [7:0] red, green, blue; 
 
+logic [3:0] bar_cnt; 
 
 //=======================================================
 //  Assignment declarations
 //=======================================================
 
 //Resets
-assign reset_p = 1'b0; //~KEY[0]; //active high
+assign reset_p = 1'b0; //active high for the pll
 assign reset_n = KEY[0] & locked; //active low + wait till the pll is going before running
 
 //VGA assignments
@@ -137,12 +138,6 @@ assign VGA_VS = v_sync;
 assign VGA_R = red; 
 assign VGA_G = green; 
 assign VGA_B = blue; 
-
-assign red = 255 & {8{video_on}}; 
-assign green = 255  & {8{video_on}}; 
-assign blue = 255 & {8{video_on}}; 
-
-assign LEDR[7:0] = line_count[11:4];  
 
 //PLL Test outputs 
 // assign reset_P = reset_p; 
@@ -161,6 +156,8 @@ assign LEDR[7:0] = line_count[11:4];
 //  Module declarations
 //=======================================================
 
+//Reset Module
+
 //74.25 MHz Clock Module
 refresh_pll REFRESH_PLL_CLK(.refclk(CLOCK_50), .rst(reset_p), .outclk_0(rfr_clk), .locked(locked)); 
 
@@ -173,6 +170,18 @@ vtc VGA_VTC(.rfr_clk(rfr_clk),
 			.v_count(line_count),
 			.video_on(video_on)
 			); 
+
+//Pixel Generator Module
+pixel_gen PIXEL_GEN(.rfr_clk(rfr_clk),
+					.reset_n(reset_n),
+					.video_on(video_on), 
+					.pixel_cnt(pixel_count),
+					.line_cnt(line_count),
+					.bar(bar_cnt),
+					.p_red(red),
+					.p_green(green),
+					.p_blue(blue)
+					); 
 
 //=======================================================
 //  Structural coding
