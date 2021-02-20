@@ -33,15 +33,28 @@ parameter V_S_PULSE = 724;
 parameter V_B_PORCH = 729;
 parameter V_MAX_LINE = 750;
 
-
-
 //=======================================================
-// PIXEL GEN Parameters
+// Phase 2 PIXEL GEN Parameters
 //=======================================================
 
-parameter BAR_W = 80;
-parameter BARS = 16;
+//Box 1 Defualt Position
+parameter B1_L_EDGE = 100;
+parameter B1_WIDTH = 50;
+parameter B1_R_EDGE = B1_L_EDGE + B1_WIDTH;
+parameter B1_T_EDGE = 100;
+parameter B1_HEIGHT = 50;
+parameter B1_B_EDGE = B1_T_EDGE + B1_HEIGHT;
 
-//Pixel 
+
+
+
+parameter B1_DEF_COLOR = 24'h0D_EA_D0;
+parameter B2_ALT_COLOR = 24'hFF_20_20; 
+
+//=======================================================
+// Color Parameters
+//=======================================================
+
+parameter OFF_COLOR = 24'h00_00_00;
 parameter MIN_RGB = 0;
 parameter MAX_RGB = 255;

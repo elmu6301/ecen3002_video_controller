@@ -129,7 +129,7 @@ logic [3:0] bar_cnt;
 
 //Resets
 assign reset_p = 1'b0; //active high for the pll
-assign ext_reset_n = (SW[0]) & locked; //active low + wait till the pll is going before running
+assign ext_reset_n = (~SW[0]) & locked; //active low + wait till the pll is going before running
 
 //VGA assignments
 assign VGA_BLANK_N = 1'b1; 
@@ -154,6 +154,11 @@ assign VGA_B = blue;
 // assign vert_count = line_count; 
 // assign v_on = video_on; 
 
+//Assign LED 
+assign LEDR[0] = ext_reset_n; //Indicates not in reset
+assign LEDR[2:1] = SW[2:1]; //Indicates if boxes are  in move states
+assign LEDR[8:7] = SW[8:7]; //Indicates if the box should change color
+assign LEDR[9] = SW[9]; //Indicates if the speed should be slow (0) or fast(1)
 
 //=======================================================
 //  Module declarations
@@ -185,7 +190,9 @@ pixel_gen PIXEL_GEN(.rfr_clk(rfr_clk),
 					.video_on(video_on), 
 					.pixel_cnt(pixel_count),
 					.line_cnt(line_count),
-					// .bar(bar_cnt),
+					//Phase 2 Inputs
+					.dColor_box1(Sw[8]),
+					
 					.p_red(red),
 					.p_green(green),
 					.p_blue(blue)

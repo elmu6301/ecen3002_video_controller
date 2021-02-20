@@ -16,9 +16,10 @@ vmap work rtl_work
 
 vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
 
+vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv}
+vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
 vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
 vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
-vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
 
 vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv}
 

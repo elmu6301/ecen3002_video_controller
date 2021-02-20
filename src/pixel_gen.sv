@@ -12,7 +12,16 @@ module pixel_gen(
     input [11:0] pixel_cnt, 
     input [11:0] line_cnt, 
 
-    // output [3:0] bar,
+    //Phase 2 Inputs
+    // input move_box1,
+    input dColor_box1, 
+    // input move_box2,
+    // input dColor_box2, 
+    // input move_up, 
+    // input move_down, 
+    // input move_left, 
+    // input move_right, 
+    
     output [7:0] p_red, 
     output [7:0] p_green, 
     output [7:0] p_blue 
@@ -24,8 +33,10 @@ module pixel_gen(
 //  REG/WIRE declarations
 //=======================================================
 
-logic [3:0] bar_cnt; 
-logic [7:0] red, green, blue; 
+logic [7:0] red, green, blue;
+logic [23:0] color_hex;  
+
+logic in_box1; 
 
 //=======================================================
 //  Assignments
@@ -35,6 +46,14 @@ logic [7:0] red, green, blue;
 assign p_red = red & {8{video_on}}; 
 assign p_green = green  & {8{video_on}}; 
 assign p_blue = blue & {8{video_on}}; 
+
+//Break out the hex color code into RGB values
+assign red = color_hex[23:16] ; 
+assign green = color_hex[15:8] ; 
+assign blue = color_hex[7:0]; 
+
+assign in_box1 = pixel_cnt <= B1_L_EDGE && pixel_cnt <= B1_R_EDGE &&
+                  line_cnt <= B1_T_EDGE && line_cnt <= B1_B_EDGE; 
 
 //Test output
 // assign bar = bar_cnt; 
@@ -50,96 +69,13 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
 	begin 
 		//Reset logic
 		if(reset_n == 1'b0) begin  
-            bar_cnt = 0; 
+            color_hex <= OFF_COLOR;  
+        end else if(in_box1 == 1) begin
+        // end else if(pixel_cnt <= B1_L_EDGE && pixel_cnt <= B1_R_EDGE && line_cnt <= B1_T_EDGE && line_cnt <= B1_B_EDGE) begin
+            color_hex <= B1_DEF_COLOR; 
         end else begin
-            if(pixel_cnt % BAR_W == 0 && pixel_cnt <= H_F_PORCH) begin
-                bar_cnt <= (bar_cnt + 1) % BARS; 
-                case(bar_cnt)
-                    0: begin
-                        red <= 255;
-                        green <= 255; 
-                        blue <= 255; 
-                    end
-                    1: begin
-                        red <= 255;
-                        green <= 0; 
-                        blue <= 0; 
-                    end
-                    2: begin
-                        red <= 255;
-                        green <= 128; 
-                        blue <= 0;  
-                    end
-                    3: begin
-                        red <= 255;
-                        green <= 255; 
-                        blue <= 0;  
-                    end
-                    4: begin
-                        red <= 128;
-                        green <= 255; 
-                        blue <= 0;  
-                    end
-                    5: begin
-                        red <= 0;
-                        green <= 255; 
-                        blue <= 0; 
-                    end
-                    6: begin
-                        red <= 0;
-                        green <= 255; 
-                        blue <= 128;  
-                    end
-                    7: begin
-                        red <= 0;
-                        green <= 255; 
-                        blue <= 255;  
-                    end
-                    8: begin
-                        red <= 0;
-                        green <= 128; 
-                        blue <= 255;  
-                    end
-                    9: begin
-                        red <= 0;
-                        green <= 0; 
-                        blue <= 255;  
-                    end
-                    10: begin
-                        red <= 128;
-                        green <= 0; 
-                        blue <= 255;  
-                    end
-                    11: begin
-                        red <= 255;
-                        green <= 0; 
-                        blue <= 255;  
-                    end
-                    12: begin
-                        red <= 255;
-                        green <= 0; 
-                        blue <= 128;  
-                    end
-                    13: begin
-                        red <= 224;
-                        green <= 224; 
-                        blue <= 224;  
-                    end
-                    14: begin
-                        red <= 128;
-                        green <= 128; 
-                        blue <= 128;  
-                    end
-                    15: begin
-                        red <= 0;
-                        green <= 0; 
-                        blue <= 0;   
-                    end
-
-                endcase
-            end
+            color_hex <= OFF_COLOR; 
         end
-       
     end
 
 endmodule
