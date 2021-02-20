@@ -25,7 +25,7 @@ logic VGA_HS, VGA_VS;
 // logic horz_sync, vert_sync, v_on; 
 
 logic [9:0] LEDR;
-// logic [9:0] SW;
+logic [9:0] SW;
 
 //Device Declaration
 em_project DUT(.*); 
@@ -37,7 +37,10 @@ initial begin
     //Set up inital values to all inputs
     CLOCK_50 = 1'b1; 
     KEY = 4'b0000;
-    #100 KEY = 4'b1111; 
+    SW = 0; 
+
+    //Let the system run
+    #100 SW[0] = 1'b1; 
     #30_000_000
     // #50_000_000
     // #100_000_000 

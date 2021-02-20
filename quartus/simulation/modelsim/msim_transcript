@@ -21,732 +21,29 @@
 # 
 # vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:22 on Feb 17,2021
+# Start time: 13:32:39 on Feb 20,2021
 # vlog -reportprogress 300 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo 
 # -- Compiling module refresh_pll
 # 
 # Top level modules:
 # 	refresh_pll
-# End time: 16:26:23 on Feb 17,2021, Elapsed time: 0:00:01
+# End time: 13:32:40 on Feb 20,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
+# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:23 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
-# -- Compiling module vtc
-# 
-# Top level modules:
-# 	vtc
-# End time: 16:26:23 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:23 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv 
-# -- Compiling module pixel_gen
-# 
-# Top level modules:
-# 	pixel_gen
-# End time: 16:26:23 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:23 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv 
-# -- Compiling module em_project
-# 
-# Top level modules:
-# 	em_project
-# End time: 16:26:24 on Feb 17,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:24 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src" C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv 
-# -- Compiling module tb
-# 
-# Top level modules:
-# 	tb
-# End time: 16:26:24 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 16:26:24 on Feb 17,2021
-# Loading sv_std.std
-# Loading work.tb
-# Loading work.em_project
-# Loading work.refresh_pll
-# Loading altera_lnsim_ver.altera_lnsim_functions
-# Loading altera_lnsim_ver.altera_pll
-# Loading work.vtc
-# Loading work.pixel_gen
-# Loading altera_lnsim_ver.dps_extra_kick
-# Loading altera_lnsim_ver.dprio_init
-# Loading altera_lnsim_ver.altera_generic_pll_functions
-# Loading altera_lnsim_ver.generic_pll
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'refresh_pll_altera_pll_altera_pll_i_639'.  Expected 26, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/REFRESH_PLL_CLK/refresh_pll_altera_pll_altera_pll_i_639 File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo Line: 46
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'refclk1'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_en'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'updn'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'num_phase_shifts'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'scanclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cntsel'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extswitch'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'adjpllin'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'fboutclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_done'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'activeclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'clkbad'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phout'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'lvds_clk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'loaden'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extclk_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cascade_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'zdbfbclk'.
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Adjusting output period from 13469.464723 to 13469.387755
-# Info: =================================================
-# Info:           Generic PLL Summary
-# Info: =================================================
-# Time scale of (tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Info: reference_clock_frequency = 50.0 MHz
-# Info: output_clock_frequency = 74.242 MHZ
-# Info: phase_shift = 0 ps
-# Info: duty_cycle = 50
-# Info: sim_additional_refclk_cycles_to_lock = 0
-# Info: output_clock_high_period = 6734.693878
-# Info: output_clock_low_period = 6734.693878
-# ** Note: $stop    : C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv(43)
-#    Time: 50000100 ns  Iteration: 0  Instance: /tb
-# Break in Module tb at C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv line 43
-do em_project_run_msim_rtl_systemverilog.do
-# if ![file isdirectory em_project_iputf_libs] {
-# 	file mkdir em_project_iputf_libs
-# }
-# 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# Error 31: Unable to unlink file "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/simulation/modelsim/rtl_work/_lib.qdb".
-# Error 133: Unable to remove directory "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/simulation/modelsim/rtl_work".
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-###### Libraries for IPUTF cores 
-###### End libraries for IPUTF cores 
-###### MIF file copy and HDL compilation commands for IPUTF cores 
-# 
-# 
-# vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:28:29 on Feb 17,2021
-# vlog -reportprogress 300 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo 
-# -- Compiling module refresh_pll
-# 
-# Top level modules:
-# 	refresh_pll
-# End time: 16:28:29 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:28:29 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
-# -- Compiling module vtc
-# 
-# Top level modules:
-# 	vtc
-# End time: 16:28:29 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:28:29 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv 
-# -- Compiling module pixel_gen
-# 
-# Top level modules:
-# 	pixel_gen
-# End time: 16:28:29 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:28:30 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv 
-# -- Compiling module em_project
-# 
-# Top level modules:
-# 	em_project
-# End time: 16:28:30 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:28:30 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src" C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv 
-# -- Compiling module tb
-# 
-# Top level modules:
-# 	tb
-# End time: 16:28:30 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
-# End time: 16:28:34 on Feb 17,2021, Elapsed time: 0:02:10
-# Errors: 0, Warnings: 22
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 16:28:34 on Feb 17,2021
-# Loading sv_std.std
-# Loading work.tb
-# Loading work.em_project
-# Loading work.refresh_pll
-# Loading altera_lnsim_ver.altera_lnsim_functions
-# Loading altera_lnsim_ver.altera_pll
-# Loading work.vtc
-# Loading work.pixel_gen
-# Loading altera_lnsim_ver.dps_extra_kick
-# Loading altera_lnsim_ver.dprio_init
-# Loading altera_lnsim_ver.altera_generic_pll_functions
-# Loading altera_lnsim_ver.generic_pll
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'refresh_pll_altera_pll_altera_pll_i_639'.  Expected 26, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/REFRESH_PLL_CLK/refresh_pll_altera_pll_altera_pll_i_639 File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo Line: 46
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'refclk1'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_en'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'updn'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'num_phase_shifts'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'scanclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cntsel'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extswitch'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'adjpllin'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'fboutclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_done'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'activeclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'clkbad'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phout'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'lvds_clk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'loaden'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extclk_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cascade_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'zdbfbclk'.
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Adjusting output period from 13469.464723 to 13469.387755
-# Info: =================================================
-# Info:           Generic PLL Summary
-# Info: =================================================
-# Time scale of (tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Info: reference_clock_frequency = 50.0 MHz
-# Info: output_clock_frequency = 74.242 MHZ
-# Info: phase_shift = 0 ps
-# Info: duty_cycle = 50
-# Info: sim_additional_refclk_cycles_to_lock = 0
-# Info: output_clock_high_period = 6734.693878
-# Info: output_clock_low_period = 6734.693878
-# WARNING: No extended dataflow license exists
-# ** Note: $stop    : C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv(44)
-#    Time: 30000100 ns  Iteration: 0  Instance: /tb
-# Break in Module tb at C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv line 44
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-do em_project_run_msim_rtl_systemverilog.do
-# if ![file isdirectory em_project_iputf_libs] {
-# 	file mkdir em_project_iputf_libs
-# }
-# 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-###### Libraries for IPUTF cores 
-###### End libraries for IPUTF cores 
-###### MIF file copy and HDL compilation commands for IPUTF cores 
-# 
-# 
-# vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:30:11 on Feb 17,2021
-# vlog -reportprogress 300 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo 
-# -- Compiling module refresh_pll
-# 
-# Top level modules:
-# 	refresh_pll
-# End time: 16:30:11 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:30:11 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
-# -- Compiling module vtc
-# 
-# Top level modules:
-# 	vtc
-# End time: 16:30:12 on Feb 17,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:30:12 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv 
-# -- Compiling module pixel_gen
-# 
-# Top level modules:
-# 	pixel_gen
-# End time: 16:30:12 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:30:12 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv 
-# -- Compiling module em_project
-# 
-# Top level modules:
-# 	em_project
-# End time: 16:30:12 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:30:12 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src" C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv 
-# -- Compiling module tb
-# 
-# Top level modules:
-# 	tb
-# End time: 16:30:12 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
-# End time: 16:30:14 on Feb 17,2021, Elapsed time: 0:01:40
-# Errors: 0, Warnings: 22
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 16:30:14 on Feb 17,2021
-# Loading sv_std.std
-# Loading work.tb
-# Loading work.em_project
-# Loading work.refresh_pll
-# Loading altera_lnsim_ver.altera_lnsim_functions
-# Loading altera_lnsim_ver.altera_pll
-# Loading work.vtc
-# Loading work.pixel_gen
-# Loading altera_lnsim_ver.dps_extra_kick
-# Loading altera_lnsim_ver.dprio_init
-# Loading altera_lnsim_ver.altera_generic_pll_functions
-# Loading altera_lnsim_ver.generic_pll
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'refresh_pll_altera_pll_altera_pll_i_639'.  Expected 26, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/REFRESH_PLL_CLK/refresh_pll_altera_pll_altera_pll_i_639 File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo Line: 46
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'refclk1'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_en'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'updn'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'num_phase_shifts'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'scanclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cntsel'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extswitch'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'adjpllin'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'fboutclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_done'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'activeclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'clkbad'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phout'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'lvds_clk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'loaden'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extclk_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cascade_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'zdbfbclk'.
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Adjusting output period from 13469.464723 to 13469.387755
-# Info: =================================================
-# Info:           Generic PLL Summary
-# Info: =================================================
-# Time scale of (tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Info: reference_clock_frequency = 50.0 MHz
-# Info: output_clock_frequency = 74.242 MHZ
-# Info: phase_shift = 0 ps
-# Info: duty_cycle = 50
-# Info: sim_additional_refclk_cycles_to_lock = 0
-# Info: output_clock_high_period = 6734.693878
-# Info: output_clock_low_period = 6734.693878
-# ** Note: $stop    : C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv(44)
-#    Time: 30000100 ns  Iteration: 0  Instance: /tb
-# Break in Module tb at C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv line 44
-do em_project_run_msim_rtl_systemverilog.do
-# if ![file isdirectory em_project_iputf_libs] {
-# 	file mkdir em_project_iputf_libs
-# }
-# 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-###### Libraries for IPUTF cores 
-###### End libraries for IPUTF cores 
-###### MIF file copy and HDL compilation commands for IPUTF cores 
-# 
-# 
-# vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:36:03 on Feb 17,2021
-# vlog -reportprogress 300 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo 
-# -- Compiling module refresh_pll
-# 
-# Top level modules:
-# 	refresh_pll
-# End time: 16:36:03 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:36:03 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
-# -- Compiling module vtc
-# 
-# Top level modules:
-# 	vtc
-# End time: 16:36:03 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:36:03 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv 
-# -- Compiling module pixel_gen
-# 
-# Top level modules:
-# 	pixel_gen
-# End time: 16:36:04 on Feb 17,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:36:04 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv 
-# -- Compiling module em_project
-# 
-# Top level modules:
-# 	em_project
-# End time: 16:36:04 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:36:04 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src" C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv 
-# -- Compiling module tb
-# 
-# Top level modules:
-# 	tb
-# End time: 16:36:04 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
-# End time: 16:36:06 on Feb 17,2021, Elapsed time: 0:05:52
-# Errors: 0, Warnings: 22
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 16:36:06 on Feb 17,2021
-# Loading sv_std.std
-# Loading work.tb
-# Loading work.em_project
-# Loading work.refresh_pll
-# Loading altera_lnsim_ver.altera_lnsim_functions
-# Loading altera_lnsim_ver.altera_pll
-# Loading work.vtc
-# Loading work.pixel_gen
-# Loading altera_lnsim_ver.dps_extra_kick
-# Loading altera_lnsim_ver.dprio_init
-# Loading altera_lnsim_ver.altera_generic_pll_functions
-# Loading altera_lnsim_ver.generic_pll
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'refresh_pll_altera_pll_altera_pll_i_639'.  Expected 26, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/REFRESH_PLL_CLK/refresh_pll_altera_pll_altera_pll_i_639 File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo Line: 46
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'refclk1'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_en'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'updn'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'num_phase_shifts'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'scanclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cntsel'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extswitch'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'adjpllin'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'fboutclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_done'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'activeclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'clkbad'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phout'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'lvds_clk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'loaden'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extclk_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cascade_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'zdbfbclk'.
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Adjusting output period from 13469.464723 to 13469.387755
-# Info: =================================================
-# Info:           Generic PLL Summary
-# Info: =================================================
-# Time scale of (tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Info: reference_clock_frequency = 50.0 MHz
-# Info: output_clock_frequency = 74.242 MHZ
-# Info: phase_shift = 0 ps
-# Info: duty_cycle = 50
-# Info: sim_additional_refclk_cycles_to_lock = 0
-# Info: output_clock_high_period = 6734.693878
-# Info: output_clock_low_period = 6734.693878
-# ** Note: $stop    : C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv(44)
-#    Time: 30000100 ns  Iteration: 0  Instance: /tb
-# Break in Module tb at C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv line 44
-add wave -position end  sim:/tb/DUT/PIXEL_GEN/pixel_cnt
-run
-run -continue
-run -continue
-run -continue
-add wave -position end  sim:/tb/DUT/PIXEL_GEN/pixel_cnt
-run
-do em_project_run_msim_rtl_systemverilog.do
-# if ![file isdirectory em_project_iputf_libs] {
-# 	file mkdir em_project_iputf_libs
-# }
-# 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# Error 31: Unable to unlink file "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/simulation/modelsim/rtl_work/_lib1_0.qpg".
-# Error 31: Unable to unlink file "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/simulation/modelsim/rtl_work/_lib1_0.qtl".
-# Error 133: Unable to remove directory "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/simulation/modelsim/rtl_work".
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-###### Libraries for IPUTF cores 
-###### End libraries for IPUTF cores 
-###### MIF file copy and HDL compilation commands for IPUTF cores 
-# 
-# 
-# vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:42:48 on Feb 17,2021
-# vlog -reportprogress 300 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo 
-# -- Compiling module refresh_pll
-# 
-# Top level modules:
-# 	refresh_pll
-# End time: 16:42:48 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:42:48 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
-# -- Compiling module vtc
-# 
-# Top level modules:
-# 	vtc
-# End time: 16:42:48 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:42:48 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv 
-# -- Compiling module pixel_gen
-# 
-# Top level modules:
-# 	pixel_gen
-# End time: 16:42:48 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:42:48 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv 
-# -- Compiling module em_project
-# 
-# Top level modules:
-# 	em_project
-# End time: 16:42:49 on Feb 17,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:42:49 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src" C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv 
-# -- Compiling module tb
-# 
-# Top level modules:
-# 	tb
-# End time: 16:42:49 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
-# End time: 16:42:50 on Feb 17,2021, Elapsed time: 0:06:44
-# Errors: 0, Warnings: 22
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 16:42:50 on Feb 17,2021
-# Loading sv_std.std
-# Loading work.tb
-# Loading work.em_project
-# Loading work.refresh_pll
-# Loading altera_lnsim_ver.altera_lnsim_functions
-# Loading altera_lnsim_ver.altera_pll
-# Loading work.vtc
-# Loading work.pixel_gen
-# Loading altera_lnsim_ver.dps_extra_kick
-# Loading altera_lnsim_ver.dprio_init
-# Loading altera_lnsim_ver.altera_generic_pll_functions
-# Loading altera_lnsim_ver.generic_pll
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'refresh_pll_altera_pll_altera_pll_i_639'.  Expected 26, found 5.
-#    Time: 0 ps  Iteration: 0  Instance: /tb/DUT/REFRESH_PLL_CLK/refresh_pll_altera_pll_altera_pll_i_639 File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo Line: 46
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'refclk1'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_en'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'updn'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'num_phase_shifts'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'scanclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cntsel'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extswitch'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'adjpllin'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'fboutclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phase_done'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'activeclk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'clkbad'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'phout'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'lvds_clk'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'loaden'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'extclk_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'cascade_out'.
-# ** Warning: (vsim-3722) C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo(46): [TFMPC] - Missing connection for port 'zdbfbclk'.
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Adjusting output period from 13469.464723 to 13469.387755
-# Info: =================================================
-# Info:           Generic PLL Summary
-# Info: =================================================
-# Time scale of (tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen) is  1ps /  1ps
-# Info: hierarchical_name = tb.DUT.REFRESH_PLL_CLK.refresh_pll_altera_pll_altera_pll_i_639.new_model.gpll.no_need_to_gen
-# Info: reference_clock_frequency = 50.0 MHz
-# Info: output_clock_frequency = 74.242 MHZ
-# Info: phase_shift = 0 ps
-# Info: duty_cycle = 50
-# Info: sim_additional_refclk_cycles_to_lock = 0
-# Info: output_clock_high_period = 6734.693878
-# Info: output_clock_low_period = 6734.693878
-add wave -position end  sim:/tb/DUT/PIXEL_GEN/pixel_cnt
-# ** Note: $stop    : C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv(44)
-#    Time: 30000100 ns  Iteration: 0  Instance: /tb
-# Break in Module tb at C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv line 44
-run -continue
-do em_project_run_msim_rtl_systemverilog.do
-# if ![file isdirectory em_project_iputf_libs] {
-# 	file mkdir em_project_iputf_libs
-# }
-# 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-###### Libraries for IPUTF cores 
-###### End libraries for IPUTF cores 
-###### MIF file copy and HDL compilation commands for IPUTF cores 
-# 
-# 
-# vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:09 on Feb 17,2021
-# vlog -reportprogress 300 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo 
-# -- Compiling module refresh_pll
-# 
-# Top level modules:
-# 	refresh_pll
-# End time: 16:47:09 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:09 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
-# -- Compiling module vtc
-# 
-# Top level modules:
-# 	vtc
-# End time: 16:47:09 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:09 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv 
-# -- Compiling module pixel_gen
-# ** Error: (vlog-13069) C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv(62): near "else": syntax error, unexpected else.
-# End time: 16:47:09 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+# Start time: 13:32:40 on Feb 20,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv 
+# -- Compiling module reset
+# ** Error: C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv(27): (vlog-2110) Illegal reference to net "reset_n".
+# ** Error: C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv(33): (vlog-2110) Illegal reference to net "reset_n".
+# End time: 13:32:40 on Feb 20,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
 # ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./em_project_run_msim_rtl_systemverilog.do line 20
+# Error in macro ./em_project_run_msim_rtl_systemverilog.do line 19
 # C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
 #     while executing
-# "vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel..."
+# "vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/reset..."
 do em_project_run_msim_rtl_systemverilog.do
 # if ![file isdirectory em_project_iputf_libs] {
 # 	file mkdir em_project_iputf_libs
@@ -768,118 +65,74 @@ do em_project_run_msim_rtl_systemverilog.do
 # 
 # vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:29 on Feb 17,2021
+# Start time: 13:34:40 on Feb 20,2021
 # vlog -reportprogress 300 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo 
 # -- Compiling module refresh_pll
 # 
 # Top level modules:
 # 	refresh_pll
-# End time: 16:47:29 on Feb 17,2021, Elapsed time: 0:00:00
+# End time: 13:34:40 on Feb 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
+# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:29 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
-# -- Compiling module vtc
+# Start time: 13:34:40 on Feb 20,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv 
+# -- Compiling module reset
 # 
 # Top level modules:
-# 	vtc
-# End time: 16:47:29 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:47:29 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv 
-# -- Compiling module pixel_gen
-# ** Error: (vlog-13069) C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv(100): near "end": syntax error, unexpected end.
-# End time: 16:47:30 on Feb 17,2021, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./em_project_run_msim_rtl_systemverilog.do line 20
-# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel..."
-do em_project_run_msim_rtl_systemverilog.do
-# if ![file isdirectory em_project_iputf_libs] {
-# 	file mkdir em_project_iputf_libs
-# }
-# 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-###### Libraries for IPUTF cores 
-###### End libraries for IPUTF cores 
-###### MIF file copy and HDL compilation commands for IPUTF cores 
-# 
-# 
-# vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:21 on Feb 17,2021
-# vlog -reportprogress 300 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo 
-# -- Compiling module refresh_pll
-# 
-# Top level modules:
-# 	refresh_pll
-# End time: 16:48:21 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:21 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
-# -- Compiling module vtc
-# 
-# Top level modules:
-# 	vtc
-# End time: 16:48:21 on Feb 17,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:21 on Feb 17,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv 
-# -- Compiling module pixel_gen
-# 
-# Top level modules:
-# 	pixel_gen
-# End time: 16:48:21 on Feb 17,2021, Elapsed time: 0:00:00
+# 	reset
+# End time: 13:34:41 on Feb 20,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:21 on Feb 17,2021
+# Start time: 13:34:41 on Feb 20,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv 
 # -- Compiling module em_project
 # 
 # Top level modules:
 # 	em_project
-# End time: 16:48:22 on Feb 17,2021, Elapsed time: 0:00:01
+# End time: 13:34:41 on Feb 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:34:41 on Feb 20,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv 
+# -- Compiling module vtc
+# 
+# Top level modules:
+# 	vtc
+# End time: 13:34:41 on Feb 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:34:41 on Feb 20,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src" C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv 
+# -- Compiling module pixel_gen
+# 
+# Top level modules:
+# 	pixel_gen
+# End time: 13:34:41 on Feb 20,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:48:22 on Feb 17,2021
+# Start time: 13:34:41 on Feb 20,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src" C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 16:48:22 on Feb 17,2021, Elapsed time: 0:00:00
+# End time: 13:34:42 on Feb 20,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
-# End time: 16:48:23 on Feb 17,2021, Elapsed time: 0:05:33
-# Errors: 2, Warnings: 22
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 16:48:23 on Feb 17,2021
+# Start time: 13:34:42 on Feb 20,2021
 # Loading sv_std.std
 # Loading work.tb
 # Loading work.em_project
+# Loading work.reset
 # Loading work.refresh_pll
 # Loading altera_lnsim_ver.altera_lnsim_functions
 # Loading altera_lnsim_ver.altera_pll
@@ -933,8 +186,6 @@ do em_project_run_msim_rtl_systemverilog.do
 # Info: sim_additional_refclk_cycles_to_lock = 0
 # Info: output_clock_high_period = 6734.693878
 # Info: output_clock_low_period = 6734.693878
-# ** Note: $stop    : C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv(44)
+# ** Note: $stop    : C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv(47)
 #    Time: 30000100 ns  Iteration: 0  Instance: /tb
-# Break in Module tb at C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv line 44
-# End time: 17:19:06 on Feb 17,2021, Elapsed time: 0:30:43
-# Errors: 0, Warnings: 22
+# Break in Module tb at C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv line 47
