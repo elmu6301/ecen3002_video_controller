@@ -9,8 +9,8 @@ module pixel_gen(
     input rfr_clk, 
     input reset_n,
     input video_on, 
-    input [11:0] pixel_cnt, 
-    input [11:0] line_cnt, 
+    input [PIXEL_CTR_W:0] pixel_cnt, 
+    input [LINE_CTR_W:0] line_cnt, 
 
     //Phase 2 Inputs
     // input move_box1,
@@ -33,10 +33,14 @@ module pixel_gen(
 //  REG/WIRE declarations
 //=======================================================
 
+//Color Declarations
 logic [7:0] red, green, blue;
 logic [23:0] color_hex;  
 
+//Box 1 Declarations
 logic in_box1; 
+logic [PIXEL_CTR_W:0] b1_l_edge, b1_r_edge; 
+logic [LINE_CTR_W:0] b1_t_edge, b1_b_edge;
 
 //=======================================================
 //  Assignments
@@ -69,8 +73,16 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
 	begin 
 		//Reset logic
 		if(reset_n == 1'b0) begin  
-            color_hex <= OFF_COLOR;  
-        end else if(in_box1 == 1) begin
+            color_hex <= OFF_COLOR;
+            //Reset box 1 to the default location
+            b1_l_edge <= B1_L_EDGE; 
+            b1_r_edge <= B1_R_EDGE; 
+            b1_t_edge <= B1_T_EDGE;
+            b1_b_edge <= B1_B_EDGE;
+
+        end else if(in_box1 == 1 && dColor_box1 == 1) begin //Draw box 1 with alternative color
+            color_hex <= B1_ALT_COLOR; 
+        end else if(in_box1 == 1) begin //Draw box 1 with default color
         // end else if(pixel_cnt <= B1_L_EDGE && pixel_cnt <= B1_R_EDGE && line_cnt <= B1_T_EDGE && line_cnt <= B1_B_EDGE) begin
             color_hex <= B1_DEF_COLOR; 
         end else begin

@@ -49,7 +49,7 @@ parameter B1_B_EDGE = B1_T_EDGE + B1_HEIGHT;
 
 
 parameter B1_DEF_COLOR = 24'h0D_EA_D0;
-parameter B2_ALT_COLOR = 24'hFF_20_20; 
+parameter B1_ALT_COLOR = 24'hFF_20_20; 
 
 //=======================================================
 // Color Parameters

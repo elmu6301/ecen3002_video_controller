@@ -191,7 +191,7 @@ pixel_gen PIXEL_GEN(.rfr_clk(rfr_clk),
 					.pixel_cnt(pixel_count),
 					.line_cnt(line_count),
 					//Phase 2 Inputs
-					.dColor_box1(Sw[8]),
+					.dColor_box1(SW[8]),
 					
 					.p_red(red),
 					.p_green(green),

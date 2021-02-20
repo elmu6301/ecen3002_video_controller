@@ -40,9 +40,12 @@ initial begin
     SW = 0; 
 
     //Let the system run
-    #100 SW[0] = 1'b1; 
+    #100 SW[0] = 1'b1;
+    
+    //Switch to alternate color
+    // #15_000_000 //SW[8] = 1'b1;  
+    // #15_000_000
     #30_000_000
-    // #50_000_000
     // #100_000_000 
     $stop; 
 end

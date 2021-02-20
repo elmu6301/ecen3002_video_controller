@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/elena/Documents/quartus_workspace/em_project/quartus/simulation/modelsim
 vem_project
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1613856229
+Z2 !s110 1613859654
 !i10b 1
-!s100 Ge29hGPEcAF80z=BUSUGK3
+!s100 Kg4hzaeB@EDPEZ9Ok:hea1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I>4UC^A0TGdfa@GbS`_`]>2
+Ic[QcNLDF2j>WEY:492>351
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1613852986
+w1613858751
 8C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv
 FC:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv
 !i122 2
-L0 6 194
+L0 6 201
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1613856229.000000
+Z6 !s108 1613859653.000000
 !s107 C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src|C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv|
 !i113 1
@@ -39,23 +39,23 @@ vpixel_gen
 R1
 R2
 !i10b 1
-!s100 QXdj?BIHYQ?]T99:naIi71
+!s100 mA`=4I6E]V4DaLVZTdnL>2
 R3
-IEoBm=n64fBWf0B9GEV1KT3
+IPR2<l9<22ZJ23S7Z<;zdb1
 R4
 S1
 R0
-w1613856062
+Z10 w1613858733
 8C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv
 FC:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv
-Z10 FC:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh
+Z11 FC:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh
 !i122 4
-L0 8 134
+L0 8 136
 R5
 r1
 !s85 0
 31
-R6
+Z12 !s108 1613859654.000000
 !s107 C:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh|C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src|C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv|
 !i113 1
@@ -63,7 +63,7 @@ R7
 R8
 R9
 vrefresh_pll
-!s110 1613856228
+Z13 !s110 1613859653
 !i10b 1
 !s100 Tc`iiSZR4`7;0_[9TfgD:0
 R3
@@ -79,14 +79,14 @@ R5
 r1
 !s85 0
 31
-!s108 1613856228.000000
+R6
 !s107 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo|
 !s90 -reportprogress|300|C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_sim/refresh_pll.vo|
 !i113 1
 R9
 vreset
 R1
-R2
+R13
 !i10b 1
 !s100 ?AeOIj=ogDTDz>J@DhfU10
 R3
@@ -112,24 +112,24 @@ R8
 R9
 vtb
 R1
-!s110 1613856230
+R2
 !i10b 1
-!s100 4iYjW@CTn17zYFAd0hn4K2
+!s100 8EHgXeAf<PjH;eE?FOkId2
 R3
-IHi`JdhCf;U]<^FMf4f6KH3
+I<=]R=bRl8Tk>Z:Si9TVhQ3
 R4
 S1
 R0
-w1613852961
+w1613859445
 8C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv
 FC:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv
 !i122 5
-L0 11 41
+L0 11 44
 R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src|C:/Users/elena/Documents/quartus_workspace/em_project/quartus/../src/tb.sv|
 !i113 1
@@ -140,23 +140,23 @@ vvtc
 R1
 R2
 !i10b 1
-!s100 jan8QfO>h;J;4B8_9=DJ62
+!s100 5caF9M3;gVk^EjT?m]m9Q0
 R3
-IHWoCEB;<^:HQgFBm^[gek1
+IdfnTAI@NAU:Q[KIlZOg[70
 R4
 S1
 R0
-w1613855676
+R10
 8C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv
 FC:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv
-R10
+R11
 !i122 3
-L0 8 155
+L0 8 153
 R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 C:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh|C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src|C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv|
 !i113 1
