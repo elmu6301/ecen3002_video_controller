@@ -17,8 +17,8 @@ module pixel_gen(
     //Phase 2 Inputs
     input move_box1,
     input dColor_box1, 
-    // input move_box2,
-    // input dColor_box2, 
+    input move_box2,
+    input dColor_box2, 
     input [4:0] move_dir,
     input speed, 
 
@@ -43,6 +43,11 @@ logic in_box1;
 logic [PIXEL_CTR_W:0] b1_l_edge, b1_r_edge; 
 logic [LINE_CTR_W:0] b1_t_edge, b1_b_edge;
 
+//Box 2 Declarations
+logic in_box2; 
+logic [PIXEL_CTR_W:0] b2_l_edge, b2_r_edge; 
+logic [LINE_CTR_W:0] b2_t_edge, b2_b_edge;
+
 //Speed Declaration
 logic [3:0] move_by; 
 //=======================================================
@@ -60,7 +65,10 @@ assign green = color_hex[15:8] ;
 assign blue = color_hex[7:0]; 
 
 assign in_box1 = (b1_l_edge <= pixel_cnt && pixel_cnt <= b1_r_edge) &&
-                  ( b1_t_edge <= line_cnt&& line_cnt <= b1_b_edge); 
+                  ( b1_t_edge <= line_cnt && line_cnt <= b1_b_edge); 
+
+assign in_box2 = (b2_l_edge <= pixel_cnt && pixel_cnt <= b2_r_edge) &&
+                  ( b2_t_edge <= line_cnt && line_cnt <= b2_b_edge); 
 
 //Movement assignmentes
 assign move_left = move_dir[3];
@@ -69,7 +77,7 @@ assign move_up = move_dir[1];
 assign move_down = move_dir[2]; 
 
 //Speed Assignment 
-assign move_by = (DEF_MOV & {4{~speed}}); 
+assign move_by = (DEF_MOV & {4{~speed}}) | (FAST_MOV & {4{speed}}) ; 
 
 //=======================================================
 //  Structural coding
@@ -86,14 +94,21 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
             color_hex <= OFF_COLOR;
             
         end else begin
-            // in_box1 <= (pixel_cnt <= b1_l_edge && pixel_cnt <= b1_r_edge &&
-            //             line_cnt <= b1_t_edge && line_cnt <= b1_b_edge); 
-            //Draw  the box
-            if(in_box1 == 1 && dColor_box1 == 1) begin //Draw box 1 with alternative color
+            
+            if(in_box1 == 1 && in_box2 == 1) begin
+                //Draw box overlap
+                color_hex <= OVERLAP_COLOR; 
+            end else if(in_box1 == 1 && dColor_box1 == 1) begin 
+                //Draw box 1 with alternative color
                 color_hex <= B1_ALT_COLOR; 
-            end else if(in_box1 == 1) begin //Draw box 1 with default color
-                // end else if(pixel_cnt <= B1_L_EDGE && pixel_cnt <= B1_R_EDGE && line_cnt <= B1_T_EDGE && line_cnt <= B1_B_EDGE) begin
+            end else if(in_box1 == 1) begin
+                //Draw box 1 with default color
                 color_hex <= B1_DEF_COLOR; 
+            end else if(in_box2 == 1 && dColor_box2 == 1) begin
+                //Draw box 2 with alternative color
+                color_hex <= B2_ALT_COLOR; 
+            end else if(in_box2 == 1) begin //Draw box 2 with default color
+                color_hex <= B2_DEF_COLOR; 
             end else begin
                 color_hex <= OFF_COLOR; 
             end
@@ -113,28 +128,56 @@ always_ff @ (posedge v_sync, negedge reset_n) begin
         b1_t_edge <= B1_T_EDGE;
         b1_b_edge <= B1_B_EDGE;
 
+        b2_l_edge <= B2_L_EDGE; 
+        b2_r_edge <= B2_R_EDGE; 
+        b2_t_edge <= B2_T_EDGE;
+        b2_b_edge <= B2_B_EDGE;
+
     end else begin
-        
-        if(move_box1 && move_right == 1 && (b1_r_edge + DEF_MOV) < MAX_PIXEL) begin
-            b1_l_edge <= b1_l_edge + DEF_MOV; 
-            b1_r_edge <= b1_r_edge + DEF_MOV; 
+        //Box 1 Movements
+        if(move_box1 && move_right == 1 && (b1_r_edge + move_by) < MAX_PIXEL) begin
+            b1_l_edge <= b1_l_edge + move_by; 
+            b1_r_edge <= b1_r_edge + move_by; 
             b1_t_edge <= b1_t_edge;
             b1_b_edge <= b1_b_edge;
-        end else if(move_box1 && move_left == 1 && MIN_PIXEL < (b1_l_edge - DEF_MOV)) begin
-            b1_l_edge <= b1_l_edge - DEF_MOV; 
-            b1_r_edge <= b1_r_edge - DEF_MOV; 
+        end else if(move_box1 && move_left == 1 && MIN_PIXEL < (b1_l_edge - move_by)) begin
+            b1_l_edge <= b1_l_edge - move_by; 
+            b1_r_edge <= b1_r_edge - move_by; 
             b1_t_edge <= b1_t_edge;
             b1_b_edge <= b1_b_edge;
-        end else if(move_box1 && move_down == 1 && (b1_b_edge + DEF_MOV) < MAX_LINE) begin
+        end else if(move_box1 && move_down == 1 && (b1_b_edge + move_by) < MAX_LINE) begin
             b1_l_edge <= b1_l_edge;  
             b1_r_edge <= b1_r_edge; 
-            b1_t_edge <= b1_t_edge + DEF_MOV;
-            b1_b_edge <= b1_b_edge + DEF_MOV;
-        end else if(move_box1 && move_up == 1 && MIN_LINE < (b1_t_edge - DEF_MOV)) begin
+            b1_t_edge <= b1_t_edge + move_by;
+            b1_b_edge <= b1_b_edge + move_by;
+        end else if(move_box1 && move_up == 1 && MIN_LINE < (b1_t_edge - move_by)) begin
             b1_l_edge <= b1_l_edge;  
             b1_r_edge <= b1_r_edge; 
-            b1_t_edge <= b1_t_edge - DEF_MOV;
-            b1_b_edge <= b1_b_edge - DEF_MOV;
+            b1_t_edge <= b1_t_edge - move_by;
+            b1_b_edge <= b1_b_edge - move_by;
+        end  
+
+        //Box 2 Movements
+        if(move_box2 && move_right == 1 && (b2_r_edge + move_by) < MAX_PIXEL) begin
+            b2_l_edge <= b2_l_edge + move_by; 
+            b2_r_edge <= b2_r_edge + move_by; 
+            b2_t_edge <= b2_t_edge;
+            b2_b_edge <= b2_b_edge;
+        end else if(move_box2 && move_left == 1 && MIN_PIXEL < (b2_l_edge - move_by)) begin
+            b2_l_edge <= b2_l_edge - move_by; 
+            b2_r_edge <= b2_r_edge - move_by; 
+            b2_t_edge <= b2_t_edge;
+            b2_b_edge <= b2_b_edge;
+        end else if(move_box2 && move_down == 1 && (b2_b_edge + move_by) < MAX_LINE) begin
+            b2_l_edge <= b2_l_edge;  
+            b2_r_edge <= b2_r_edge; 
+            b2_t_edge <= b2_t_edge + move_by;
+            b2_b_edge <= b2_b_edge + move_by;
+        end else if(move_box2 && move_up == 1 && MIN_LINE < (b2_t_edge - move_by)) begin
+            b2_l_edge <= b2_l_edge;  
+            b2_r_edge <= b2_r_edge; 
+            b2_t_edge <= b2_t_edge - move_by;
+            b2_b_edge <= b2_b_edge - move_by;
         end    
         
     end    

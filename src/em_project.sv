@@ -196,7 +196,8 @@ pixel_gen PIXEL_GEN(.rfr_clk(rfr_clk),
 					//Phase 2 Inputs
 					.dColor_box1(SW[8]),
 					.move_box1(SW[1]),
-					
+					.dColor_box2(SW[7]),
+					.move_box2(SW[2]),
 					.move_dir(~KEY[3:0]),
 					.speed(SW[9]),
 
