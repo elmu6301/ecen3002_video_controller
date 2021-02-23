@@ -190,9 +190,16 @@ pixel_gen PIXEL_GEN(.rfr_clk(rfr_clk),
 					.video_on(video_on), 
 					.pixel_cnt(pixel_count),
 					.line_cnt(line_count),
+					.h_sync(h_sync),
+					.v_sync(v_sync), 
+					
 					//Phase 2 Inputs
 					.dColor_box1(SW[8]),
+					.move_box1(SW[1]),
 					
+					.move_dir(~KEY[3:0]),
+					.speed(SW[9]),
+
 					.p_red(red),
 					.p_green(green),
 					.p_blue(blue)

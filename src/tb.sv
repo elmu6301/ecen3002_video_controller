@@ -36,16 +36,20 @@ always # 10 CLOCK_50 = ~CLOCK_50;
 initial begin
     //Set up inital values to all inputs
     CLOCK_50 = 1'b1; 
-    KEY = 4'b0000;
-    SW = 0; 
+    KEY = 4'b1111;
+    SW = 1; 
 
     //Let the system run
-    #100 SW[0] = 1'b1;
-    
+    #100 SW[0] = 1'b0;
+    #15_529_800 KEY[0] = 1'b0; 
+    // #15_529_800 KEY[0] = 1'b1; 
+    // #15_529_800 KEY[0] = 1'b0; 
+    // #15_529_800 KEY[0] = 1'b1; 
+    // #15_529_800 KEY[0] = 1'b0; 
     //Switch to alternate color
     // #15_000_000 //SW[8] = 1'b1;  
     // #15_000_000
-    #30_000_000
+    // #30_000_000
     // #100_000_000 
     $stop; 
 end

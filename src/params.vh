@@ -25,12 +25,19 @@ parameter LINE_CTR_W = 11;
 parameter H_F_PORCH = 1279;
 parameter H_S_PULSE = 1389;
 parameter H_B_PORCH = 1429;
+parameter H_MIN_PIXEL = 0;
 parameter H_MAX_PIXEL = 1649;
+
+parameter MIN_PIXEL = 0;
+parameter MIN_LINE = 0;
+parameter MAX_PIXEL = H_F_PORCH;
+parameter MAX_LINE = V_F_PORCH;
 
 //Vertical
 parameter V_F_PORCH = 719;
 parameter V_S_PULSE = 724;
 parameter V_B_PORCH = 729;
+parameter V_MIN_LINE = 0;
 parameter V_MAX_LINE = 750;
 
 //=======================================================
@@ -38,18 +45,21 @@ parameter V_MAX_LINE = 750;
 //=======================================================
 
 //Box 1 Defualt Position
-parameter B1_L_EDGE = 100;
+parameter B1_L_EDGE = 500;
 parameter B1_WIDTH = 50;
 parameter B1_R_EDGE = B1_L_EDGE + B1_WIDTH;
-parameter B1_T_EDGE = 100;
+parameter B1_T_EDGE = 300;
 parameter B1_HEIGHT = 50;
 parameter B1_B_EDGE = B1_T_EDGE + B1_HEIGHT;
 
-
-
-
+//Box 1 Colors
 parameter B1_DEF_COLOR = 24'h0D_EA_D0;
 parameter B1_ALT_COLOR = 24'hFF_20_20; 
+
+
+//Position increments
+parameter DEF_MOV = 5;
+parameter FAST_MOV = 10;
 
 //=======================================================
 // Color Parameters
