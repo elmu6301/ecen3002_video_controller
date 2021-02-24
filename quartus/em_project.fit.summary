@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Feb 22 21:27:09 2021
+Fitter Status : Successful - Tue Feb 23 19:54:35 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 Revision Name : em_project
 Top-level Entity Name : em_project
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 296 / 41,910 ( < 1 % )
+Logic utilization (in ALMs) : 295 / 41,910 ( < 1 % )
 Total registers : 144
 Total pins : 54 / 499 ( 11 % )
 Total virtual pins : 0

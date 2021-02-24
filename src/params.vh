@@ -54,7 +54,7 @@ parameter B1_B_EDGE = B1_T_EDGE + B1_HEIGHT;
 
 //Box 1 Colors
 parameter B1_DEF_COLOR = 24'h0D_EA_D0;
-parameter B1_ALT_COLOR = 24'hFF_20_20; 
+parameter B1_ALT_COLOR = 24'h00_80_FF; 
 
 //Box 2 Defualt Position
 parameter B2_L_EDGE = 700;
@@ -66,15 +66,15 @@ parameter B2_B_EDGE = B2_T_EDGE + B2_HEIGHT;
 
 //Box 2 Colors
 parameter B2_DEF_COLOR = 24'hB2_66_FF;
-parameter B2_ALT_COLOR = 24'hFF_00_FF; 
+parameter B2_ALT_COLOR = 24'hCC_99_FF; 
 
 //Overlap Color
 parameter OVERLAP_COLOR = 24'hFF_FF_FF;
 
 
 //Position increments
-parameter DEF_MOV = 5;
-parameter FAST_MOV = 10;
+parameter DEF_MOV = 2;
+parameter FAST_MOV = 5;
 
 //=======================================================
 // Color Parameters

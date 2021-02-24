@@ -1,5 +1,5 @@
 Analysis & Synthesis report for em_project
-Mon Feb 22 21:25:29 2021
+Tue Feb 23 19:52:37 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -54,13 +54,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 22 21:25:29 2021           ;
+; Analysis & Synthesis Status     ; Successful - Tue Feb 23 19:52:36 2021           ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                   ; em_project                                      ;
 ; Top-level Entity Name           ; em_project                                      ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 137                                             ;
+; Total registers                 ; 136                                             ;
 ; Total pins                      ; 54                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -200,16 +200,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 293               ;
+; Estimate of Logic utilization (ALMs needed) ; 292               ;
 ;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 511               ;
+; Combinational ALUT usage for logic          ; 509               ;
 ;     -- 7 input functions                    ; 2                 ;
 ;     -- 6 input functions                    ; 71                ;
 ;     -- 5 input functions                    ; 26                ;
 ;     -- 4 input functions                    ; 138               ;
-;     -- <=3 input functions                  ; 274               ;
+;     -- <=3 input functions                  ; 272               ;
 ;                                             ;                   ;
-; Dedicated logic registers                   ; 137               ;
+; Dedicated logic registers                   ; 136               ;
 ;                                             ;                   ;
 ; I/O pins                                    ; 54                ;
 ;                                             ;                   ;
@@ -219,9 +219,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                 ;
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; reset:RESET|rst_n ;
-; Maximum fan-out                             ; 134               ;
-; Total fan-out                               ; 2373              ;
-; Average fan-out                             ; 3.13              ;
+; Maximum fan-out                             ; 133               ;
+; Total fan-out                               ; 2348              ;
+; Average fan-out                             ; 3.11              ;
 +---------------------------------------------+-------------------+
 
 
@@ -230,8 +230,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name      ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+------------------+--------------+
-; |em_project                               ; 511 (1)             ; 137 (0)                   ; 0                 ; 0          ; 54   ; 0            ; |em_project                                                                                       ; em_project       ; work         ;
-;    |pixel_gen:PIXEL_GEN|                  ; 450 (450)           ; 106 (106)                 ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN                                                                   ; pixel_gen        ; work         ;
+; |em_project                               ; 509 (1)             ; 136 (0)                   ; 0                 ; 0          ; 54   ; 0            ; |em_project                                                                                       ; em_project       ; work         ;
+;    |pixel_gen:PIXEL_GEN|                  ; 448 (448)           ; 105 (105)                 ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN                                                                   ; pixel_gen        ; work         ;
 ;    |refresh_pll:REFRESH_PLL_CLK|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK                                                           ; refresh_pll      ; refresh_pll  ;
 ;       |refresh_pll_0002:refresh_pll_inst| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst                         ; refresh_pll_0002 ; refresh_pll  ;
 ;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i ; altera_pll       ; work         ;
@@ -250,20 +250,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------------+-----------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+-------------------------------------------+-----------------------------------------------+
-; Register name                             ; Reason for Removal                            ;
-+-------------------------------------------+-----------------------------------------------+
-; pixel_gen:PIXEL_GEN|color_hex[8]          ; Merged with pixel_gen:PIXEL_GEN|color_hex[12] ;
-; pixel_gen:PIXEL_GEN|color_hex[1..3]       ; Merged with pixel_gen:PIXEL_GEN|color_hex[0]  ;
-; pixel_gen:PIXEL_GEN|color_hex[6,7]        ; Merged with pixel_gen:PIXEL_GEN|color_hex[4]  ;
-; pixel_gen:PIXEL_GEN|color_hex[5,20,21,23] ; Merged with pixel_gen:PIXEL_GEN|color_hex[17] ;
-; pixel_gen:PIXEL_GEN|color_hex[9]          ; Merged with pixel_gen:PIXEL_GEN|color_hex[14] ;
-; pixel_gen:PIXEL_GEN|color_hex[15]         ; Merged with pixel_gen:PIXEL_GEN|color_hex[11] ;
-; pixel_gen:PIXEL_GEN|color_hex[18,19]      ; Merged with pixel_gen:PIXEL_GEN|color_hex[16] ;
-; Total Number of Removed Registers = 14    ;                                               ;
-+-------------------------------------------+-----------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++-----------------------------------------+-----------------------------------------------+
+; Register name                           ; Reason for Removal                            ;
++-----------------------------------------+-----------------------------------------------+
+; pixel_gen:PIXEL_GEN|color_hex[1..3,5]   ; Merged with pixel_gen:PIXEL_GEN|color_hex[0]  ;
+; pixel_gen:PIXEL_GEN|color_hex[6,7]      ; Merged with pixel_gen:PIXEL_GEN|color_hex[4]  ;
+; pixel_gen:PIXEL_GEN|color_hex[8,22]     ; Merged with pixel_gen:PIXEL_GEN|color_hex[12] ;
+; pixel_gen:PIXEL_GEN|color_hex[9,14]     ; Merged with pixel_gen:PIXEL_GEN|color_hex[13] ;
+; pixel_gen:PIXEL_GEN|color_hex[17,20,21] ; Merged with pixel_gen:PIXEL_GEN|color_hex[10] ;
+; pixel_gen:PIXEL_GEN|color_hex[18,19]    ; Merged with pixel_gen:PIXEL_GEN|color_hex[11] ;
+; Total Number of Removed Registers = 15  ;                                               ;
++-----------------------------------------+-----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -271,10 +270,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 137   ;
+; Total registers                              ; 136   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 137   ;
+; Number of registers using Asynchronous Clear ; 136   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 108   ;
 ; Number of registers using Preset             ; 0     ;
@@ -286,8 +285,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; vtc:VGA_VTC|video_on_h                  ; 11      ;
-; vtc:VGA_VTC|video_on_v                  ; 11      ;
+; vtc:VGA_VTC|video_on_h                  ; 10      ;
+; vtc:VGA_VTC|video_on_v                  ; 10      ;
+; pixel_gen:PIXEL_GEN|b1_t_edge[5]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_t_edge[3]        ; 3       ;
+; pixel_gen:PIXEL_GEN|b1_t_edge[2]        ; 3       ;
+; pixel_gen:PIXEL_GEN|b1_t_edge[8]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_b_edge[1]        ; 3       ;
+; pixel_gen:PIXEL_GEN|b1_b_edge[3]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_b_edge[2]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_b_edge[4]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_b_edge[6]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_b_edge[8]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_r_edge[9]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_l_edge[8]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_l_edge[2]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_l_edge[5]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_l_edge[4]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_l_edge[7]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_l_edge[6]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_r_edge[1]        ; 3       ;
+; pixel_gen:PIXEL_GEN|b1_r_edge[2]        ; 4       ;
+; pixel_gen:PIXEL_GEN|b1_r_edge[5]        ; 4       ;
 ; pixel_gen:PIXEL_GEN|b2_t_edge[7]        ; 4       ;
 ; pixel_gen:PIXEL_GEN|b2_t_edge[6]        ; 4       ;
 ; pixel_gen:PIXEL_GEN|b2_t_edge[3]        ; 3       ;
@@ -310,26 +329,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; pixel_gen:PIXEL_GEN|b2_r_edge[1]        ; 3       ;
 ; pixel_gen:PIXEL_GEN|b2_r_edge[3]        ; 4       ;
 ; pixel_gen:PIXEL_GEN|b2_r_edge[2]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_t_edge[5]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_t_edge[3]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b1_t_edge[2]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b1_t_edge[8]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[1]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[3]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[2]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[4]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[6]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[8]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_r_edge[9]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[8]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[2]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[5]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[4]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[7]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[6]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_r_edge[1]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b1_r_edge[2]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_r_edge[5]        ; 4       ;
 ; Total number of inverted registers = 44 ;         ;
 +-----------------------------------------+---------+
 
@@ -339,9 +338,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |em_project|vtc:VGA_VTC|l_ctr[8]              ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|color_hex[17] ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b2_r_edge[11] ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |em_project|vtc:VGA_VTC|l_ctr[0]              ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|color_hex[11] ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b2_l_edge[11] ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b2_b_edge[0]  ;
 ; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b1_r_edge[0]  ;
 ; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b1_t_edge[1]  ;
@@ -628,7 +627,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; B1_HEIGHT      ; 50                       ; Signed Integer  ;
 ; B1_B_EDGE      ; 350                      ; Signed Integer  ;
 ; B1_DEF_COLOR   ; 000011011110101011010000 ; Unsigned Binary ;
-; B1_ALT_COLOR   ; 111111110010000000100000 ; Unsigned Binary ;
+; B1_ALT_COLOR   ; 000000001000000011111111 ; Unsigned Binary ;
 ; B2_L_EDGE      ; 700                      ; Signed Integer  ;
 ; B2_WIDTH       ; 50                       ; Signed Integer  ;
 ; B2_R_EDGE      ; 750                      ; Signed Integer  ;
@@ -636,10 +635,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; B2_HEIGHT      ; 50                       ; Signed Integer  ;
 ; B2_B_EDGE      ; 250                      ; Signed Integer  ;
 ; B2_DEF_COLOR   ; 101100100110011011111111 ; Unsigned Binary ;
-; B2_ALT_COLOR   ; 111111110000000011111111 ; Unsigned Binary ;
+; B2_ALT_COLOR   ; 110011001001100111111111 ; Unsigned Binary ;
 ; OVERLAP_COLOR  ; 111111111111111111111111 ; Unsigned Binary ;
-; DEF_MOV        ; 5                        ; Signed Integer  ;
-; FAST_MOV       ; 10                       ; Signed Integer  ;
+; DEF_MOV        ; 2                        ; Signed Integer  ;
+; FAST_MOV       ; 5                        ; Signed Integer  ;
 ; OFF_COLOR      ; 000000000000000000000000 ; Unsigned Binary ;
 ; MIN_RGB        ; 0                        ; Signed Integer  ;
 ; MAX_RGB        ; 255                      ; Signed Integer  ;
@@ -675,7 +674,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; B1_HEIGHT      ; 50                       ; Signed Integer       ;
 ; B1_B_EDGE      ; 350                      ; Signed Integer       ;
 ; B1_DEF_COLOR   ; 000011011110101011010000 ; Unsigned Binary      ;
-; B1_ALT_COLOR   ; 111111110010000000100000 ; Unsigned Binary      ;
+; B1_ALT_COLOR   ; 000000001000000011111111 ; Unsigned Binary      ;
 ; B2_L_EDGE      ; 700                      ; Signed Integer       ;
 ; B2_WIDTH       ; 50                       ; Signed Integer       ;
 ; B2_R_EDGE      ; 750                      ; Signed Integer       ;
@@ -683,10 +682,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; B2_HEIGHT      ; 50                       ; Signed Integer       ;
 ; B2_B_EDGE      ; 250                      ; Signed Integer       ;
 ; B2_DEF_COLOR   ; 101100100110011011111111 ; Unsigned Binary      ;
-; B2_ALT_COLOR   ; 111111110000000011111111 ; Unsigned Binary      ;
+; B2_ALT_COLOR   ; 110011001001100111111111 ; Unsigned Binary      ;
 ; OVERLAP_COLOR  ; 111111111111111111111111 ; Unsigned Binary      ;
-; DEF_MOV        ; 5                        ; Signed Integer       ;
-; FAST_MOV       ; 10                       ; Signed Integer       ;
+; DEF_MOV        ; 2                        ; Signed Integer       ;
+; FAST_MOV       ; 5                        ; Signed Integer       ;
 ; OFF_COLOR      ; 000000000000000000000000 ; Unsigned Binary      ;
 ; MIN_RGB        ; 0                        ; Signed Integer       ;
 ; MAX_RGB        ; 255                      ; Signed Integer       ;
@@ -726,30 +725,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 137                         ;
-;     CLR               ; 29                          ;
+; arriav_ff             ; 136                         ;
+;     CLR               ; 28                          ;
 ;     ENA CLR           ; 96                          ;
 ;     ENA CLR SCLR      ; 12                          ;
-; arriav_lcell_comb     ; 514                         ;
+; arriav_lcell_comb     ; 512                         ;
 ;     arith             ; 125                         ;
 ;         0 data inputs ; 4                           ;
-;         1 data inputs ; 81                          ;
-;         2 data inputs ; 36                          ;
-;         3 data inputs ; 4                           ;
+;         1 data inputs ; 88                          ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 3                           ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 287                         ;
+;     normal            ; 285                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 9                           ;
-;         3 data inputs ; 37                          ;
+;         3 data inputs ; 35                          ;
 ;         4 data inputs ; 138                         ;
 ;         5 data inputs ; 26                          ;
 ;         6 data inputs ; 71                          ;
 ;     shared            ; 100                         ;
 ;         0 data inputs ; 4                           ;
-;         1 data inputs ; 64                          ;
-;         2 data inputs ; 32                          ;
+;         1 data inputs ; 72                          ;
+;         2 data inputs ; 24                          ;
 ; boundary_port         ; 54                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
@@ -773,7 +772,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Mon Feb 22 21:25:05 2021
+    Info: Processing started: Tue Feb 23 19:52:07 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off em_project -c em_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -895,16 +894,16 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
     Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
-Info (21057): Implemented 570 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 568 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 515 logic cells
+    Info (21061): Implemented 513 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Mon Feb 22 21:25:29 2021
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Tue Feb 23 19:52:37 2021
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:46
 
 
 +------------------------------------------+
