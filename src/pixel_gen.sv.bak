@@ -1,0 +1,82 @@
+/*
+    ECEN 3002
+    Video Project: Pixel Generator Module
+    Elena Murray
+
+*/
+
+module pixel_gen(
+    input rfr_clk, 
+    input reset_n,
+    input video_on, 
+    input [11:0] pixel_cnt, 
+    input [11:0] line_cnt, 
+
+    //Phase 2 Inputs
+    // input move_box1,
+    // input move_box2,
+    // input move_up, 
+    // input move_down, 
+    // input move_left, 
+    // input move_right, 
+
+    // output [3:0] bar,
+    output [7:0] p_red, 
+    output [7:0] p_green, 
+    output [7:0] p_blue 
+    
+); 
+`include "params.vh"
+
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+
+logic [3:0] bar_cnt; 
+logic [7:0] red, green, blue;
+logic [23:0] color_hex;  
+
+logic in_box1; 
+
+//=======================================================
+//  Assignments
+//=======================================================
+
+//Assign RGB outputs only when the video is on
+assign p_red = red & {8{video_on}}; 
+assign p_green = green  & {8{video_on}}; 
+assign p_blue = blue & {8{video_on}}; 
+
+//Break out the hex color code into RGB values
+assign red = color_hex[23:16] ; 
+assign green = color_hex[15:8] ; 
+assign blue = color_hex[7:0]; 
+
+assign in_box1 = pixel_cnt <= B1_L_EDGE && pixel_cnt <= B1_R_EDGE &&
+                  line_cnt <= B1_T_EDGE && line_cnt <= B1_B_EDGE; 
+
+//Test output
+// assign bar = bar_cnt; 
+
+//=======================================================
+//  Structural coding
+//=======================================================
+/*
+    Generating 16 vertical bars
+*/
+//Trigger on the positive edge of the clock and the reset 
+always_ff @ (posedge rfr_clk, negedge reset_n) 
+	begin 
+		//Reset logic
+		if(reset_n == 1'b0) begin  
+            color_hex <= OFF_COLOR;  
+        end if(in_box1) begin
+            color_hex <= B1_DEF_COLOR; 
+        end else begin
+            color_hex <= OFF_COLOR; 
+        end
+    end
+
+endmodule
+
+

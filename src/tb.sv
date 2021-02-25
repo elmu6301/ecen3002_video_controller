@@ -25,7 +25,7 @@ logic VGA_HS, VGA_VS;
 // logic horz_sync, vert_sync, v_on; 
 
 logic [9:0] LEDR;
-// logic [9:0] SW;
+logic [9:0] SW;
 
 //Device Declaration
 em_project DUT(.*); 
@@ -36,10 +36,20 @@ always # 10 CLOCK_50 = ~CLOCK_50;
 initial begin
     //Set up inital values to all inputs
     CLOCK_50 = 1'b1; 
-    KEY = 4'b0000;
-    #100 KEY = 4'b1111; 
-    #30_000_000
-    // #50_000_000
+    KEY = 4'b1111;
+    SW = 1; 
+
+    //Let the system run
+    #100 SW[0] = 1'b0;
+    #15_529_800 KEY[0] = 1'b0; 
+    // #15_529_800 KEY[0] = 1'b1; 
+    // #15_529_800 KEY[0] = 1'b0; 
+    // #15_529_800 KEY[0] = 1'b1; 
+    // #15_529_800 KEY[0] = 1'b0; 
+    //Switch to alternate color
+    // #15_000_000 //SW[8] = 1'b1;  
+    // #15_000_000
+    // #30_000_000
     // #100_000_000 
     $stop; 
 end

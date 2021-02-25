@@ -1,9 +1,13 @@
 Archive Project report for em_project
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Wed Feb 17 13:41:44 2021
 =======
 Tue Feb 23 20:13:32 2021
 >>>>>>> Stashed changes
+=======
+Thu Feb 18 13:48:20 2021
+>>>>>>> master
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -40,11 +44,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 ; Archive Project Status ; Successful - Wed Feb 17 13:41:44 2021 ;
 =======
 ; Archive Project Status ; Successful - Tue Feb 23 20:13:32 2021 ;
 >>>>>>> Stashed changes
+=======
+; Archive Project Status ; Successful - Thu Feb 18 13:48:20 2021 ;
+>>>>>>> master
 ; Revision Name          ; em_project                            ;
 ; Top-level Entity Name  ; em_project                            ;
 ; Family                 ; Cyclone V                             ;
@@ -62,16 +70,21 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory C:/Users/elena/Documents/quartus_workspace/em_project/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_02_17_2021.qar'
 =======
 Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_part2.qar'
 >>>>>>> Stashed changes
+=======
+Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_phase1.qar'
+>>>>>>> master
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'em_project.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     Info: Peak virtual memory: 4825 megabytes
     Info: Processing ended: Wed Feb 17 13:41:44 2021
@@ -83,6 +96,12 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:11
 >>>>>>> Stashed changes
+=======
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Thu Feb 18 13:48:20 2021
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:16
+>>>>>>> master
 
 
 +-------------------------------------------------------------------------+
@@ -95,6 +114,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; ../src/reset.sv                                                         ;
 ; ../src/tb.sv                                                            ;
 ; ../src/vtc.sv                                                           ;
+; /users/elena/documents/quartus_workspace/em_project/src/params.vh       ;
 ; C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv ;
 ; C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv  ;
 ; C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv      ;
