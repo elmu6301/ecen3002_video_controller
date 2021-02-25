@@ -15,10 +15,10 @@ module em_project(
 	input 		     [3:0]		KEY,
 
 	// //////////// SW //////////
-	// input 		     [9:0]		SW,
+	input 		     [9:0]		SW,
 
 	// //////////// LED //////////
-	// output		     [9:0]		LEDR,
+	output		     [9:0]		LEDR,
 
 	// //////////// Seg7 //////////
 	// output		     [6:0]		HEX0,
@@ -129,7 +129,7 @@ logic [3:0] bar_cnt;
 
 //Resets
 assign reset_p = 1'b0; //active high for the pll
-assign ext_reset_n = (KEY[0] | KEY[1] | KEY[2] | KEY[3]) & locked; //active low + wait till the pll is going before running
+assign ext_reset_n = (~SW[0]) & locked; //active low + wait till the pll is going before running
 
 //VGA assignments
 assign VGA_BLANK_N = 1'b1; 
@@ -154,10 +154,21 @@ assign VGA_B = blue;
 // assign vert_count = line_count; 
 // assign v_on = video_on; 
 
+//Assign LED 
+assign LEDR[0] = ext_reset_n; //Indicates not in reset
+assign LEDR[2:1] = SW[2:1]; //Indicates if boxes are  in move states
+assign LEDR[8:7] = SW[8:7]; //Indicates if the box should change color
+assign LEDR[9] = SW[9]; //Indicates if the speed should be slow (0) or fast(1)
 
 //=======================================================
 //  Module declarations
 //=======================================================
+
+// `ifdef simulation 
+//     parameter DIV1 = 3;
+// `else
+//     parameter DIV1 = 10;
+// `endif
 
 //Reset Module
 reset RESET(.clock(rfr_clk),
@@ -185,7 +196,17 @@ pixel_gen PIXEL_GEN(.rfr_clk(rfr_clk),
 					.video_on(video_on), 
 					.pixel_cnt(pixel_count),
 					.line_cnt(line_count),
-					// .bar(bar_cnt),
+					.h_sync(h_sync),
+					.v_sync(v_sync), 
+					
+					//Phase 2 Inputs
+					.dColor_box1(SW[8]),
+					.move_box1(SW[1]),
+					.dColor_box2(SW[7]),
+					.move_box2(SW[2]),
+					.move_dir(~KEY[3:0]),
+					.speed(SW[9]),
+
 					.p_red(red),
 					.p_green(green),
 					.p_blue(blue)

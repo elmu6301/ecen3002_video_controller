@@ -1,5 +1,9 @@
 Archive Project report for em_project
+<<<<<<< Updated upstream
 Wed Feb 17 13:41:44 2021
+=======
+Tue Feb 23 20:13:32 2021
+>>>>>>> Stashed changes
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -36,7 +40,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
+<<<<<<< Updated upstream
 ; Archive Project Status ; Successful - Wed Feb 17 13:41:44 2021 ;
+=======
+; Archive Project Status ; Successful - Tue Feb 23 20:13:32 2021 ;
+>>>>>>> Stashed changes
 ; Revision Name          ; em_project                            ;
 ; Top-level Entity Name  ; em_project                            ;
 ; Family                 ; Cyclone V                             ;
@@ -54,16 +62,27 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory C:/Users/elena/Documents/quartus_workspace/em_project/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
+<<<<<<< Updated upstream
 Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_02_17_2021.qar'
+=======
+Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_part2.qar'
+>>>>>>> Stashed changes
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'em_project.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+<<<<<<< Updated upstream
     Info: Peak virtual memory: 4825 megabytes
     Info: Processing ended: Wed Feb 17 13:41:44 2021
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:15
+=======
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Tue Feb 23 20:13:32 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:11
+>>>>>>> Stashed changes
 
 
 +-------------------------------------------------------------------------+
