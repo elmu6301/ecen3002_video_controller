@@ -1,5 +1,5 @@
 Analysis & Synthesis report for em_project
-Tue Feb 23 19:52:37 2021
+Thu Feb 25 15:47:20 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -21,13 +21,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
  13. Parameter Settings for User Entity Instance: refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i
  14. Parameter Settings for User Entity Instance: vtc:VGA_VTC
  15. Parameter Settings for User Entity Instance: pixel_gen:PIXEL_GEN
- 16. Port Connectivity Checks: "pixel_gen:PIXEL_GEN"
- 17. Port Connectivity Checks: "refresh_pll:REFRESH_PLL_CLK"
- 18. Port Connectivity Checks: "reset:RESET"
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
- 22. Analysis & Synthesis Suppressed Messages
+ 16. Parameter Settings for Inferred Entity Instance: pixel_gen:PIXEL_GEN|lpm_divide:Mod0
+ 17. Port Connectivity Checks: "pixel_gen:PIXEL_GEN"
+ 18. Port Connectivity Checks: "refresh_pll:REFRESH_PLL_CLK"
+ 19. Port Connectivity Checks: "reset:RESET"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,13 +55,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 23 19:52:36 2021           ;
+; Analysis & Synthesis Status     ; Successful - Thu Feb 25 15:47:20 2021           ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                   ; em_project                                      ;
 ; Top-level Entity Name           ; em_project                                      ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 136                                             ;
+; Total registers                 ; 45                                              ;
 ; Total pins                      ; 54                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
@@ -192,52 +193,63 @@ https://fpgasoftware.intel.com/eula.
 ; refresh_pll/refresh_pll_0002.v                                    ; yes             ; User Verilog HDL File        ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll/refresh_pll_0002.v ; refresh_pll ;
 ; /users/elena/documents/quartus_workspace/em_project/src/params.vh ; yes             ; Auto-Found Unspecified File  ; /users/elena/documents/quartus_workspace/em_project/src/params.vh                            ;             ;
 ; altera_pll.v                                                      ; yes             ; Megafunction                 ; c:/intelfpga/20.1/quartus/libraries/megafunctions/altera_pll.v                               ;             ;
+; lpm_divide.tdf                                                    ; yes             ; Megafunction                 ; c:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                             ;             ;
+; abs_divider.inc                                                   ; yes             ; Megafunction                 ; c:/intelfpga/20.1/quartus/libraries/megafunctions/abs_divider.inc                            ;             ;
+; sign_div_unsign.inc                                               ; yes             ; Megafunction                 ; c:/intelfpga/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                        ;             ;
+; aglobal201.inc                                                    ; yes             ; Megafunction                 ; c:/intelfpga/20.1/quartus/libraries/megafunctions/aglobal201.inc                             ;             ;
+; db/lpm_divide_m3m.tdf                                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/lpm_divide_m3m.tdf          ;             ;
+; db/sign_div_unsign_plh.tdf                                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/sign_div_unsign_plh.tdf     ;             ;
+; db/alt_u_div_ove.tdf                                              ; yes             ; Auto-Generated Megafunction  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/alt_u_div_ove.tdf           ;             ;
 +-------------------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 292               ;
-;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 509               ;
-;     -- 7 input functions                    ; 2                 ;
-;     -- 6 input functions                    ; 71                ;
-;     -- 5 input functions                    ; 26                ;
-;     -- 4 input functions                    ; 138               ;
-;     -- <=3 input functions                  ; 272               ;
-;                                             ;                   ;
-; Dedicated logic registers                   ; 136               ;
-;                                             ;                   ;
-; I/O pins                                    ; 54                ;
-;                                             ;                   ;
-; Total DSP Blocks                            ; 0                 ;
-;                                             ;                   ;
-; Total PLLs                                  ; 1                 ;
-;     -- PLLs                                 ; 1                 ;
-;                                             ;                   ;
-; Maximum fan-out node                        ; reset:RESET|rst_n ;
-; Maximum fan-out                             ; 133               ;
-; Total fan-out                               ; 2348              ;
-; Average fan-out                             ; 3.11              ;
-+---------------------------------------------+-------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                        ;
++---------------------------------------------+------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                ;
++---------------------------------------------+------------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 106                                                                                                  ;
+;                                             ;                                                                                                      ;
+; Combinational ALUT usage for logic          ; 197                                                                                                  ;
+;     -- 7 input functions                    ; 1                                                                                                    ;
+;     -- 6 input functions                    ; 13                                                                                                   ;
+;     -- 5 input functions                    ; 5                                                                                                    ;
+;     -- 4 input functions                    ; 36                                                                                                   ;
+;     -- <=3 input functions                  ; 142                                                                                                  ;
+;                                             ;                                                                                                      ;
+; Dedicated logic registers                   ; 45                                                                                                   ;
+;                                             ;                                                                                                      ;
+; I/O pins                                    ; 54                                                                                                   ;
+;                                             ;                                                                                                      ;
+; Total DSP Blocks                            ; 0                                                                                                    ;
+;                                             ;                                                                                                      ;
+; Total PLLs                                  ; 1                                                                                                    ;
+;     -- PLLs                                 ; 1                                                                                                    ;
+;                                             ;                                                                                                      ;
+; Maximum fan-out node                        ; refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
+; Maximum fan-out                             ; 48                                                                                                   ;
+; Total fan-out                               ; 859                                                                                                  ;
+; Average fan-out                             ; 2.45                                                                                                 ;
++---------------------------------------------+------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name      ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+------------------+--------------+
-; |em_project                               ; 509 (1)             ; 136 (0)                   ; 0                 ; 0          ; 54   ; 0            ; |em_project                                                                                       ; em_project       ; work         ;
-;    |pixel_gen:PIXEL_GEN|                  ; 448 (448)           ; 105 (105)                 ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN                                                                   ; pixel_gen        ; work         ;
-;    |refresh_pll:REFRESH_PLL_CLK|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK                                                           ; refresh_pll      ; refresh_pll  ;
-;       |refresh_pll_0002:refresh_pll_inst| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst                         ; refresh_pll_0002 ; refresh_pll  ;
-;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i ; altera_pll       ; work         ;
-;    |reset:RESET|                          ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|reset:RESET                                                                           ; reset            ; work         ;
-;    |vtc:VGA_VTC|                          ; 60 (60)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |em_project|vtc:VGA_VTC                                                                           ; vtc              ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                       ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |em_project                               ; 197 (1)             ; 45 (0)                    ; 0                 ; 0          ; 54   ; 0            ; |em_project                                                                                                                     ; em_project          ; work         ;
+;    |pixel_gen:PIXEL_GEN|                  ; 134 (36)            ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN                                                                                                 ; pixel_gen           ; work         ;
+;       |lpm_divide:Mod0|                   ; 98 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_m3m:auto_generated|  ; 98 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0|lpm_divide_m3m:auto_generated                                                   ; lpm_divide_m3m      ; work         ;
+;             |sign_div_unsign_plh:divider| ; 98 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0|lpm_divide_m3m:auto_generated|sign_div_unsign_plh:divider                       ; sign_div_unsign_plh ; work         ;
+;                |alt_u_div_ove:divider|    ; 98 (98)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0|lpm_divide_m3m:auto_generated|sign_div_unsign_plh:divider|alt_u_div_ove:divider ; alt_u_div_ove       ; work         ;
+;    |refresh_pll:REFRESH_PLL_CLK|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK                                                                                         ; refresh_pll         ; refresh_pll  ;
+;       |refresh_pll_0002:refresh_pll_inst| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst                                                       ; refresh_pll_0002    ; refresh_pll  ;
+;          |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i                               ; altera_pll          ; work         ;
+;    |reset:RESET|                          ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|reset:RESET                                                                                                         ; reset               ; work         ;
+;    |vtc:VGA_VTC|                          ; 62 (62)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |em_project|vtc:VGA_VTC                                                                                                         ; vtc                 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -250,19 +262,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+-----------------------------------------+-----------------------------------------------+
-; Register name                           ; Reason for Removal                            ;
-+-----------------------------------------+-----------------------------------------------+
-; pixel_gen:PIXEL_GEN|color_hex[1..3,5]   ; Merged with pixel_gen:PIXEL_GEN|color_hex[0]  ;
-; pixel_gen:PIXEL_GEN|color_hex[6,7]      ; Merged with pixel_gen:PIXEL_GEN|color_hex[4]  ;
-; pixel_gen:PIXEL_GEN|color_hex[8,22]     ; Merged with pixel_gen:PIXEL_GEN|color_hex[12] ;
-; pixel_gen:PIXEL_GEN|color_hex[9,14]     ; Merged with pixel_gen:PIXEL_GEN|color_hex[13] ;
-; pixel_gen:PIXEL_GEN|color_hex[17,20,21] ; Merged with pixel_gen:PIXEL_GEN|color_hex[10] ;
-; pixel_gen:PIXEL_GEN|color_hex[18,19]    ; Merged with pixel_gen:PIXEL_GEN|color_hex[11] ;
-; Total Number of Removed Registers = 15  ;                                               ;
-+-----------------------------------------+-----------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++------------------------------------------+-----------------------------------------------+
+; Register name                            ; Reason for Removal                            ;
++------------------------------------------+-----------------------------------------------+
+; pixel_gen:PIXEL_GEN|color_hex[1..3]      ; Merged with pixel_gen:PIXEL_GEN|color_hex[0]  ;
+; pixel_gen:PIXEL_GEN|color_hex[6]         ; Merged with pixel_gen:PIXEL_GEN|color_hex[5]  ;
+; pixel_gen:PIXEL_GEN|color_hex[8,9,11,12] ; Merged with pixel_gen:PIXEL_GEN|color_hex[10] ;
+; pixel_gen:PIXEL_GEN|color_hex[14]        ; Merged with pixel_gen:PIXEL_GEN|color_hex[13] ;
+; pixel_gen:PIXEL_GEN|color_hex[17..20]    ; Merged with pixel_gen:PIXEL_GEN|color_hex[16] ;
+; pixel_gen:PIXEL_GEN|color_hex[22]        ; Merged with pixel_gen:PIXEL_GEN|color_hex[21] ;
+; Total Number of Removed Registers = 14   ;                                               ;
++------------------------------------------+-----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -270,86 +282,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 136   ;
+; Total registers                              ; 45    ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 136   ;
+; Number of registers using Asynchronous Clear ; 35    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 108   ;
+; Number of registers using Clock Enable       ; 22    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; vtc:VGA_VTC|video_on_h                  ; 10      ;
-; vtc:VGA_VTC|video_on_v                  ; 10      ;
-; pixel_gen:PIXEL_GEN|b1_t_edge[5]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_t_edge[3]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b1_t_edge[2]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b1_t_edge[8]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[1]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[3]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[2]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[4]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[6]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_b_edge[8]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_r_edge[9]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[8]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[2]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[5]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[4]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[7]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_l_edge[6]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_r_edge[1]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b1_r_edge[2]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b1_r_edge[5]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_t_edge[7]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_t_edge[6]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_t_edge[3]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b2_b_edge[4]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_b_edge[7]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_b_edge[6]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_b_edge[5]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_b_edge[1]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b2_b_edge[3]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_l_edge[9]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_r_edge[9]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_l_edge[4]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_l_edge[7]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_l_edge[5]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_l_edge[3]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_l_edge[2]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_r_edge[7]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_r_edge[6]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_r_edge[5]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_r_edge[1]        ; 3       ;
-; pixel_gen:PIXEL_GEN|b2_r_edge[3]        ; 4       ;
-; pixel_gen:PIXEL_GEN|b2_r_edge[2]        ; 4       ;
-; Total number of inverted registers = 44 ;         ;
-+-----------------------------------------+---------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; vtc:VGA_VTC|video_on_h                 ; 11      ;
+; vtc:VGA_VTC|video_on_v                 ; 11      ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |em_project|vtc:VGA_VTC|l_ctr[0]              ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|color_hex[11] ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b2_l_edge[11] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b2_b_edge[0]  ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b1_r_edge[0]  ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b1_t_edge[1]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|color_hex[4]  ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b2_r_edge[7]  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b2_b_edge[6]  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b1_l_edge[4]  ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|b1_t_edge[8]  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |em_project|vtc:VGA_VTC|l_ctr[11] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -613,35 +573,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; H_MAX_PIXEL    ; 1649                     ; Signed Integer  ;
 ; MIN_PIXEL      ; 0                        ; Signed Integer  ;
 ; MIN_LINE       ; 0                        ; Signed Integer  ;
-; MAX_PIXEL      ; 1279                     ; Signed Integer  ;
-; MAX_LINE       ; 719                      ; Signed Integer  ;
 ; V_F_PORCH      ; 719                      ; Signed Integer  ;
 ; V_S_PULSE      ; 724                      ; Signed Integer  ;
 ; V_B_PORCH      ; 729                      ; Signed Integer  ;
 ; V_MIN_LINE     ; 0                        ; Signed Integer  ;
 ; V_MAX_LINE     ; 750                      ; Signed Integer  ;
-; B1_L_EDGE      ; 500                      ; Signed Integer  ;
-; B1_WIDTH       ; 50                       ; Signed Integer  ;
-; B1_R_EDGE      ; 550                      ; Signed Integer  ;
-; B1_T_EDGE      ; 300                      ; Signed Integer  ;
-; B1_HEIGHT      ; 50                       ; Signed Integer  ;
-; B1_B_EDGE      ; 350                      ; Signed Integer  ;
-; B1_DEF_COLOR   ; 000011011110101011010000 ; Unsigned Binary ;
-; B1_ALT_COLOR   ; 000000001000000011111111 ; Unsigned Binary ;
-; B2_L_EDGE      ; 700                      ; Signed Integer  ;
-; B2_WIDTH       ; 50                       ; Signed Integer  ;
-; B2_R_EDGE      ; 750                      ; Signed Integer  ;
-; B2_T_EDGE      ; 200                      ; Signed Integer  ;
-; B2_HEIGHT      ; 50                       ; Signed Integer  ;
-; B2_B_EDGE      ; 250                      ; Signed Integer  ;
-; B2_DEF_COLOR   ; 101100100110011011111111 ; Unsigned Binary ;
-; B2_ALT_COLOR   ; 110011001001100111111111 ; Unsigned Binary ;
-; OVERLAP_COLOR  ; 111111111111111111111111 ; Unsigned Binary ;
-; DEF_MOV        ; 2                        ; Signed Integer  ;
-; FAST_MOV       ; 5                        ; Signed Integer  ;
+; MAX_PIXEL      ; 1279                     ; Signed Integer  ;
+; MAX_LINE       ; 719                      ; Signed Integer  ;
+; BAR_W          ; 80                       ; Signed Integer  ;
+; BARS           ; 16                       ; Signed Integer  ;
 ; OFF_COLOR      ; 000000000000000000000000 ; Unsigned Binary ;
 ; MIN_RGB        ; 0                        ; Signed Integer  ;
 ; MAX_RGB        ; 255                      ; Signed Integer  ;
+; WHITE          ; 111111111111111111111111 ; Unsigned Binary ;
+; RED            ; 111111110000000000000000 ; Unsigned Binary ;
+; ORANGE         ; 111111111000000000000000 ; Unsigned Binary ;
+; YELLOW         ; 111111111111111100000000 ; Unsigned Binary ;
+; GREEN_Y        ; 100000001111111100000000 ; Unsigned Binary ;
+; GREEN          ; 000000001111111100000000 ; Unsigned Binary ;
+; GREEN_B        ; 000000001111111110000000 ; Unsigned Binary ;
+; TEAL           ; 000000001111111111111111 ; Unsigned Binary ;
+; BLUE_G         ; 000000001000000011111111 ; Unsigned Binary ;
+; BLUE           ; 000000000000000011111111 ; Unsigned Binary ;
+; VIOLET         ; 100000000000000011111111 ; Unsigned Binary ;
+; PINK           ; 111111110000000011111111 ; Unsigned Binary ;
+; FUSHIA         ; 111111110000000010000000 ; Unsigned Binary ;
+; DARK_GREY      ; 111000001110000011100000 ; Unsigned Binary ;
+; LIGHT_GREY     ; 100000001000000010010000 ; Unsigned Binary ;
+; BLACK          ; 000000000000000000000000 ; Unsigned Binary ;
 +----------------+--------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -660,36 +619,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; H_MAX_PIXEL    ; 1649                     ; Signed Integer       ;
 ; MIN_PIXEL      ; 0                        ; Signed Integer       ;
 ; MIN_LINE       ; 0                        ; Signed Integer       ;
-; MAX_PIXEL      ; 1279                     ; Signed Integer       ;
-; MAX_LINE       ; 719                      ; Signed Integer       ;
 ; V_F_PORCH      ; 719                      ; Signed Integer       ;
 ; V_S_PULSE      ; 724                      ; Signed Integer       ;
 ; V_B_PORCH      ; 729                      ; Signed Integer       ;
 ; V_MIN_LINE     ; 0                        ; Signed Integer       ;
 ; V_MAX_LINE     ; 750                      ; Signed Integer       ;
-; B1_L_EDGE      ; 500                      ; Signed Integer       ;
-; B1_WIDTH       ; 50                       ; Signed Integer       ;
-; B1_R_EDGE      ; 550                      ; Signed Integer       ;
-; B1_T_EDGE      ; 300                      ; Signed Integer       ;
-; B1_HEIGHT      ; 50                       ; Signed Integer       ;
-; B1_B_EDGE      ; 350                      ; Signed Integer       ;
-; B1_DEF_COLOR   ; 000011011110101011010000 ; Unsigned Binary      ;
-; B1_ALT_COLOR   ; 000000001000000011111111 ; Unsigned Binary      ;
-; B2_L_EDGE      ; 700                      ; Signed Integer       ;
-; B2_WIDTH       ; 50                       ; Signed Integer       ;
-; B2_R_EDGE      ; 750                      ; Signed Integer       ;
-; B2_T_EDGE      ; 200                      ; Signed Integer       ;
-; B2_HEIGHT      ; 50                       ; Signed Integer       ;
-; B2_B_EDGE      ; 250                      ; Signed Integer       ;
-; B2_DEF_COLOR   ; 101100100110011011111111 ; Unsigned Binary      ;
-; B2_ALT_COLOR   ; 110011001001100111111111 ; Unsigned Binary      ;
-; OVERLAP_COLOR  ; 111111111111111111111111 ; Unsigned Binary      ;
-; DEF_MOV        ; 2                        ; Signed Integer       ;
-; FAST_MOV       ; 5                        ; Signed Integer       ;
+; MAX_PIXEL      ; 1279                     ; Signed Integer       ;
+; MAX_LINE       ; 719                      ; Signed Integer       ;
+; BAR_W          ; 80                       ; Signed Integer       ;
+; BARS           ; 16                       ; Signed Integer       ;
 ; OFF_COLOR      ; 000000000000000000000000 ; Unsigned Binary      ;
 ; MIN_RGB        ; 0                        ; Signed Integer       ;
 ; MAX_RGB        ; 255                      ; Signed Integer       ;
+; WHITE          ; 111111111111111111111111 ; Unsigned Binary      ;
+; RED            ; 111111110000000000000000 ; Unsigned Binary      ;
+; ORANGE         ; 111111111000000000000000 ; Unsigned Binary      ;
+; YELLOW         ; 111111111111111100000000 ; Unsigned Binary      ;
+; GREEN_Y        ; 100000001111111100000000 ; Unsigned Binary      ;
+; GREEN          ; 000000001111111100000000 ; Unsigned Binary      ;
+; GREEN_B        ; 000000001111111110000000 ; Unsigned Binary      ;
+; TEAL           ; 000000001111111111111111 ; Unsigned Binary      ;
+; BLUE_G         ; 000000001000000011111111 ; Unsigned Binary      ;
+; BLUE           ; 000000000000000011111111 ; Unsigned Binary      ;
+; VIOLET         ; 100000000000000011111111 ; Unsigned Binary      ;
+; PINK           ; 111111110000000011111111 ; Unsigned Binary      ;
+; FUSHIA         ; 111111110000000010000000 ; Unsigned Binary      ;
+; DARK_GREY      ; 111000001110000011100000 ; Unsigned Binary      ;
+; LIGHT_GREY     ; 100000001000000010010000 ; Unsigned Binary      ;
+; BLACK          ; 000000000000000000000000 ; Unsigned Binary      ;
 +----------------+--------------------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: pixel_gen:PIXEL_GEN|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_m3m ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -725,35 +706,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 136                         ;
-;     CLR               ; 28                          ;
-;     ENA CLR           ; 96                          ;
+; arriav_ff             ; 45                          ;
+;     CLR               ; 23                          ;
+;     ENA               ; 10                          ;
 ;     ENA CLR SCLR      ; 12                          ;
-; arriav_lcell_comb     ; 512                         ;
-;     arith             ; 125                         ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 88                          ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 3                           ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 285                         ;
+; arriav_lcell_comb     ; 200                         ;
+;     arith             ; 74                          ;
+;         0 data inputs ; 10                          ;
+;         1 data inputs ; 29                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 12                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 117                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 35                          ;
-;         4 data inputs ; 138                         ;
-;         5 data inputs ; 26                          ;
-;         6 data inputs ; 71                          ;
-;     shared            ; 100                         ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 72                          ;
-;         2 data inputs ; 24                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 24                          ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 13                          ;
+;     shared            ; 8                           ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
 ; boundary_port         ; 54                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.90                        ;
-; Average LUT depth     ; 4.00                        ;
+; Max LUT depth         ; 13.60                       ;
+; Average LUT depth     ; 7.80                        ;
 +-----------------------+-----------------------------+
 
 
@@ -762,7 +743,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -772,7 +753,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Tue Feb 23 19:52:07 2021
+    Info: Processing started: Thu Feb 25 15:46:57 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off em_project -c em_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -792,8 +773,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file refresh
     Info (12023): Found entity 1: refresh_pll_0002 File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll/refresh_pll_0002.v Line: 2
 Info (12127): Elaborating entity "em_project" for the top level hierarchy
 Warning (10034): Output port "LEDR[6..3]" at em_project.sv(21) has no driver File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
-Info (12128): Elaborating entity "reset" for hierarchy "reset:RESET" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 172
-Info (12128): Elaborating entity "refresh_pll" for hierarchy "refresh_pll:REFRESH_PLL_CLK" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 175
+Info (12128): Elaborating entity "reset" for hierarchy "reset:RESET" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 178
+Info (12128): Elaborating entity "refresh_pll" for hierarchy "refresh_pll:REFRESH_PLL_CLK" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 181
 Info (12128): Elaborating entity "refresh_pll_0002" for hierarchy "refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll.v Line: 20
 Info (12128): Elaborating entity "altera_pll" for hierarchy "refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll/refresh_pll_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -859,22 +840,28 @@ Info (12133): Instantiated megafunction "refresh_pll:REFRESH_PLL_CLK|refresh_pll
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "vtc" for hierarchy "vtc:VGA_VTC" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 185
+Info (12128): Elaborating entity "vtc" for hierarchy "vtc:VGA_VTC" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 191
 Warning (10230): Verilog HDL assignment warning at vtc.sv(64): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 64
 Warning (10230): Verilog HDL assignment warning at vtc.sv(68): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 68
 Warning (10230): Verilog HDL assignment warning at vtc.sv(72): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 72
 Warning (10230): Verilog HDL assignment warning at vtc.sv(77): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 77
 Warning (10230): Verilog HDL assignment warning at vtc.sv(79): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 79
-Info (12128): Elaborating entity "pixel_gen" for hierarchy "pixel_gen:PIXEL_GEN" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 207
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(80): truncated value with size 32 to match size of target (4) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 80
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(126): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 126
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(127): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 127
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(128): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 128
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(129): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 129
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(131): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 131
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(132): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 132
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(133): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 133
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(134): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 134
+Info (12128): Elaborating entity "pixel_gen" for hierarchy "pixel_gen:PIXEL_GEN" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 213
+Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(75): truncated value with size 32 to match size of target (4) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 75
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixel_gen:PIXEL_GEN|Mod0" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 74
+Info (12130): Elaborated megafunction instantiation "pixel_gen:PIXEL_GEN|lpm_divide:Mod0" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 74
+Info (12133): Instantiated megafunction "pixel_gen:PIXEL_GEN|lpm_divide:Mod0" with the following parameter: File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 74
+    Info (12134): Parameter "LPM_WIDTHN" = "12"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m3m.tdf
+    Info (12023): Found entity 1: lpm_divide_m3m File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/lpm_divide_m3m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_plh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_plh File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/sign_div_unsign_plh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/alt_u_div_ove.tdf Line: 23
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
@@ -889,21 +876,25 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance refresh_pll:REFRESH_PLL_CLK|refresh_pll_0002:refresh_pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 15
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 15
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 15
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 15
     Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
     Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
     Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
-Info (21057): Implemented 568 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 255 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 513 logic cells
+    Info (21061): Implemented 200 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Tue Feb 23 19:52:37 2021
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:46
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Thu Feb 25 15:47:20 2021
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:41
 
 
 +------------------------------------------+
