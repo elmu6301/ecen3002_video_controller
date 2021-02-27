@@ -56,9 +56,6 @@ assign blue = color_hex[7:0];
 //=======================================================
 //  Structural coding
 //=======================================================
-/*
-    Drawing the boxes
-*/
 
 /*
     Generating 16 vertical bars
@@ -71,61 +68,37 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
 		if(reset_n == 1'b0) begin  
             bar_cnt = 0; 
         end else begin
-            if(pixel_cnt % BAR_W == 0 && pixel_cnt <= MAX_PIXEL ) begin
-                bar_cnt <= (bar_cnt + 1) % BARS; 
-                case(bar_cnt)
-                    0: begin
-                        color_hex <= WHITE; 
-                    end
-                    1: begin
-                        color_hex <= RED; 
-                    end
-                    2: begin
-                        color_hex <= ORANGE; 
-                    end
-                    3: begin
-                        color_hex <= YELLOW; 
-                    end
-                    4: begin
-                        color_hex <= GREEN_Y; 
-                    end
-                    5: begin
-                        color_hex <= GREEN; 
-                    end
-                    6: begin
-                        color_hex <= GREEN_B; 
-                    end
-                    7: begin 
-                        color_hex <= TEAL;    
-                    end
-                    8: begin
-                        color_hex <= BLUE_G; 
-                    end
-                    9: begin
-                        color_hex <= BLUE; 
-                    end
-                    10: begin
-                        color_hex <= VIOLET; 
-                    end
-                    11: begin
-                        color_hex <= PINK;  
-                    end
-                    12: begin
-                        color_hex <= FUSHIA;  
-                    end
-                    13: begin
-                        color_hex <= DARK_GREY; 
-                    end
-                    14: begin
-                        color_hex <= LIGHT_GREY; 
-                    end
-                    15: begin   
-                        color_hex <= BLACK; 
-                    end
+            if(pixel_cnt <= MAX_PIXEL && line_cnt <= MAX_LINE) begin
+                if(pixel_cnt % BAR_W == 0) begin
+                    bar_cnt <= (bar_cnt + 1) % BARS; 
+                end
 
+
+                case(pixel_cnt)
+                    (0): color_hex <= RED;
+                    (MAX_PIXEL/16): color_hex <= ORANGE;
+                    (2*MAX_PIXEL/16): color_hex <= YELLOW;
+                    (3*MAX_PIXEL/16): color_hex <= GREEN;
+                    (4*MAX_PIXEL/16): color_hex <= BLUE;
+                    (5*MAX_PIXEL/16): color_hex <= INDIGO;
+                    (6*MAX_PIXEL/16): color_hex <= VIOLET;
+                    (7*MAX_PIXEL/16): color_hex <= BLACK;
+                    (8*MAX_PIXEL/16): color_hex <= WHITE; 
+                    (9*MAX_PIXEL/16): color_hex <= VIOLET;
+                    (10*MAX_PIXEL/16): color_hex <= INDIGO; 
+                    (11*MAX_PIXEL/16): color_hex <= BLUE;
+                    (12*MAX_PIXEL/16): color_hex <= GREEN;
+                    (13*MAX_PIXEL/16): color_hex <= YELLOW;
+                    (14*MAX_PIXEL/16): color_hex <= ORANGE;
+                    (15*MAX_PIXEL/16): color_hex <= RED;
+                   
                 endcase
+            end else begin
+                color_hex <= BLACK;
             end
-        end
+
+        end 
+           
        
     end
 

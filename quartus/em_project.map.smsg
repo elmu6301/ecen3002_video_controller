@@ -1,4 +1,4 @@
-Warning (10268): Verilog HDL information at pixel_gen.sv(68): always construct contains both blocking and non-blocking assignments File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 68
-Info (10281): Verilog HDL Declaration information at params.vh(93): object "RED" differs only in case from object "red" in the same scope File: C:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh Line: 93
-Info (10281): Verilog HDL Declaration information at params.vh(97): object "GREEN" differs only in case from object "green" in the same scope File: C:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh Line: 97
-Info (10281): Verilog HDL Declaration information at params.vh(101): object "BLUE" differs only in case from object "blue" in the same scope File: C:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh Line: 101
+Warning (10268): Verilog HDL information at pixel_gen.sv(65): always construct contains both blocking and non-blocking assignments File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 65
+Info (10281): Verilog HDL Declaration information at params.vh(84): object "RED" differs only in case from object "red" in the same scope File: C:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh Line: 84
+Info (10281): Verilog HDL Declaration information at params.vh(88): object "GREEN" differs only in case from object "green" in the same scope File: C:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh Line: 88
+Info (10281): Verilog HDL Declaration information at params.vh(92): object "BLUE" differs only in case from object "blue" in the same scope File: C:/Users/elena/Documents/quartus_workspace/em_project/src/params.vh Line: 92

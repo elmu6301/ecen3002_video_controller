@@ -4,12 +4,7 @@
     Elena Murray
 
 */
-// `define highres
-// `ifdef highres 
-//     parameter DIV1 = 3;
-// `else
-//     parameter DIV1 = 10;
-// `endif
+`define highres
 
 //=======================================================
 // TOP/All Module Parameters
@@ -26,39 +21,32 @@
 // VTC Parameters
 //=======================================================
 
-`ifdef highres //1080 Resolution
+/*---- 1080p Resolution ----*/
+`ifdef highres 
 
 //Horizontal 
-parameter H_F_PORCH = 1279;
-parameter H_S_PULSE = 1389;
-parameter H_B_PORCH = 1429;
+parameter H_F_PORCH = 1919;
+parameter H_S_PULSE = 2007;
+parameter H_B_PORCH = 2051;
 parameter H_MIN_PIXEL = 0;
-parameter H_MAX_PIXEL = 1649;
-
-parameter MIN_PIXEL = 0;
-parameter MIN_LINE = 0;
-// parameter MAX_PIXEL = H_F_PORCH;
-// parameter MAX_LINE = V_F_PORCH;
+parameter H_MAX_PIXEL = 2199;
 
 //Vertical
-parameter V_F_PORCH = 719;
-parameter V_S_PULSE = 724;
-parameter V_B_PORCH = 729;
+parameter V_F_PORCH = 1079;
+parameter V_S_PULSE = 1083;
+parameter V_B_PORCH = 1088;
 parameter V_MIN_LINE = 0;
-parameter V_MAX_LINE = 750;
+parameter V_MAX_LINE = 1125;
 
-`else //Defualt to 720 p resoluiton
+/*---- Default 720p Resolution ----*/
+`else 
+
 //Horizontal 
 parameter H_F_PORCH = 1279;
 parameter H_S_PULSE = 1389;
 parameter H_B_PORCH = 1429;
 parameter H_MIN_PIXEL = 0;
 parameter H_MAX_PIXEL = 1649;
-
-parameter MIN_PIXEL = 0;
-parameter MIN_LINE = 0;
-// parameter MAX_PIXEL = H_F_PORCH;
-// parameter MAX_LINE = V_F_PORCH;
 
 //Vertical
 parameter V_F_PORCH = 719;
@@ -69,8 +57,11 @@ parameter V_MAX_LINE = 750;
 
 `endif
 
+/*---- Shared Parameters ----*/
+parameter MIN_PIXEL = 0;
+parameter MIN_LINE = 0;
 parameter MAX_PIXEL = 1279;
-parameter MAX_LINE = 719;
+parameter MAX_LINE = 750;
 
 
 //=======================================================
@@ -99,9 +90,10 @@ parameter GREEN_B = 24'h00_FF_80; //6
 parameter TEAL = 24'h00_FF_FF; //7
 parameter BLUE_G = 24'h00_80_FF; //8
 parameter BLUE = 24'h00_00_FF; //9
-parameter VIOLET = 24'h80_00_FF; //10
+parameter INDIGO = 24'h50_00_FF; //10
+parameter VIOLET = 24'h90_00_FF; //10
 parameter PINK = 24'hFF_00_FF; //11
 parameter FUSHIA = 24'hFF_00_80; //12
-parameter DARK_GREY = 24'hE0_E0_E0; //13
-parameter LIGHT_GREY = 24'h80_80_90; //14
+parameter LIGHT_GREY = 24'hE0_E0_E0; //13
+parameter DARK_GREY = 24'h80_80_90; //14
 parameter BLACK = 24'h00_00_00; //15

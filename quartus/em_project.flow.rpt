@@ -1,5 +1,5 @@
 Flow report for em_project
-Thu Feb 25 15:49:20 2021
+Fri Feb 26 19:26:37 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Feb 25 15:49:20 2021           ;
+; Flow Status                     ; Successful - Fri Feb 26 19:26:37 2021           ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                   ; em_project                                      ;
 ; Top-level Entity Name           ; em_project                                      ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSXFC6D6F31C6                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 106 / 41,910 ( < 1 % )                          ;
-; Total registers                 ; 49                                              ;
+; Logic utilization (in ALMs)     ; 68 / 41,910 ( < 1 % )                           ;
+; Total registers                 ; 48                                              ;
 ; Total pins                      ; 54 / 499 ( 11 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                           ;
@@ -68,41 +68,49 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/25/2021 15:46:59 ;
+; Start date & time ; 02/26/2021 19:24:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; em_project          ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 207273074477957.161429321901336        ; --            ; --          ; --             ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb             ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                     ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_FILE                  ; ../src/tb.sv                           ; --            ; --          ; tb             ;
-; EDA_TEST_BENCH_MODULE_NAME           ; tb                                     ; --            ; --          ; tb             ;
-; EDA_TEST_BENCH_NAME                  ; tb                                     ; --            ; --          ; eda_simulation ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
-; MISC_FILE                            ; refresh_pll.cmp                        ; --            ; --          ; --             ;
-; MISC_FILE                            ; refresh_pll_sim/refresh_pll.vo         ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
-; SPD_FILE                             ; refresh_pll.spd                        ; --            ; --          ; --             ;
-; SYNTHESIS_ONLY_QIP                   ; On                                     ; --            ; --          ; --             ;
-; VERILOG_INPUT_VERSION                ; SystemVerilog_2005                     ; Verilog_2001  ; --          ; --             ;
-; VERILOG_SHOW_LMF_MAPPING_MESSAGES    ; Off                                    ; --            ; --          ; --             ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                 ;
++--------------------------------------+--------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                      ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+--------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 207273074477957.161439266613100            ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                         ; --            ; --          ; tb             ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                         ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                          ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)            ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                            ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; ../src/tb.sv                               ; --            ; --          ; tb             ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb                                         ; --            ; --          ; tb             ;
+; EDA_TEST_BENCH_NAME                  ; tb                                         ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                       ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                         ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                          ; --            ; --          ; --             ;
+; MISC_FILE                            ; refresh_pll.cmp                            ; --            ; --          ; --             ;
+; MISC_FILE                            ; refresh_pll_sim/refresh_pll.vo             ; --            ; --          ; --             ;
+; MISC_FILE                            ; refresh_pll_720p.cmp                       ; --            ; --          ; --             ;
+; MISC_FILE                            ; refresh_pll_720p_sim/refresh_pll_720p.vo   ; --            ; --          ; --             ;
+; MISC_FILE                            ; refresh_pll_1080p.cmp                      ; --            ; --          ; --             ;
+; MISC_FILE                            ; refresh_pll_1080p_sim/refresh_pll_1080p.vo ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)     ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)     ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)     ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                        ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW      ; --            ; --          ; --             ;
+; SPD_FILE                             ; refresh_pll.spd                            ; --            ; --          ; --             ;
+; SPD_FILE                             ; refresh_pll_720p.spd                       ; --            ; --          ; --             ;
+; SPD_FILE                             ; refresh_pll_1080p.spd                      ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                         ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                         ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                         ; --            ; --          ; --             ;
+; VERILOG_INPUT_VERSION                ; SystemVerilog_2005                         ; Verilog_2001  ; --          ; --             ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES    ; Off                                        ; --            ; --          ; --             ;
++--------------------------------------+--------------------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -110,12 +118,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4801 MB             ; 00:00:40                           ;
-; Fitter               ; 00:01:21     ; 1.0                     ; 6351 MB             ; 00:02:08                           ;
-; Assembler            ; 00:00:12     ; 1.0                     ; 4839 MB             ; 00:00:12                           ;
-; Timing Analyzer      ; 00:00:13     ; 1.1                     ; 5140 MB             ; 00:00:13                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4830 MB             ; 00:00:04                           ;
-; Total                ; 00:02:12     ; --                      ; --                  ; 00:03:17                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4800 MB             ; 00:00:42                           ;
+; Fitter               ; 00:01:08     ; 1.0                     ; 6351 MB             ; 00:01:41                           ;
+; Assembler            ; 00:00:12     ; 1.0                     ; 4847 MB             ; 00:00:12                           ;
+; Timing Analyzer      ; 00:00:15     ; 1.0                     ; 5144 MB             ; 00:00:14                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4831 MB             ; 00:00:04                           ;
+; Total                ; 00:02:02     ; --                      ; --                  ; 00:02:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

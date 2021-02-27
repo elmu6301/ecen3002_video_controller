@@ -2,112 +2,112 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 1.925
+Type  : Slow 1100mV 85C Model Setup 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.739
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.305
+Type  : Slow 1100mV 85C Model Hold 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.325
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Recovery 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 11.753
+Type  : Slow 1100mV 85C Model Recovery 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.232
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Removal 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.554
+Type  : Slow 1100mV 85C Model Removal 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.558
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
-Slack : 0.612
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.421
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 6.032
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.670
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : 9.670
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 1.761
+Type  : Slow 1100mV 0C Model Setup 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.666
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.285
+Type  : Slow 1100mV 0C Model Hold 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.301
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Recovery 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 11.809
+Type  : Slow 1100mV 0C Model Recovery 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.297
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Removal 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.510
+Type  : Slow 1100mV 0C Model Removal 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.515
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
-Slack : 0.612
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.421
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 5.985
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.625
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : 9.673
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 7.129
+Type  : Fast 1100mV 85C Model Setup 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.400
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.181
+Type  : Fast 1100mV 85C Model Hold 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.180
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Recovery 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 12.385
+Type  : Fast 1100mV 85C Model Recovery 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.856
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Removal 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.289
+Type  : Fast 1100mV 85C Model Removal 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.293
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
-Slack : 0.612
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.421
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 6.285
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.923
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : 9.336
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 7.544
+Type  : Fast 1100mV 0C Model Setup 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.630
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.162
+Type  : Fast 1100mV 0C Model Hold 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.169
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Recovery 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 12.488
+Type  : Fast 1100mV 0C Model Recovery 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.939
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Removal 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 0.259
+Type  : Fast 1100mV 0C Model Removal 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.266
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
-Slack : 0.612
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.421
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'REFRESH_PLL_CLK|refresh_pll_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 6.273
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'REFRESH_PLL_CLK_1080p|refresh_pll_1080p_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.912
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
