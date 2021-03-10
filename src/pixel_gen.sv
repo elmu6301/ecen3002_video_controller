@@ -29,7 +29,9 @@ module pixel_gen(
 logic [7:0] red, green, blue;
 logic [23:0] color_hex;  
 
-logic [3:0] bar_cnt; 
+logic [3:0] v_bar_cnt; 
+logic [3:0] h_bar_cnt; 
+logic [5:0] b_cnt; 
 
 //ROM Declarations
 logic [5:0] rom_addr;
@@ -55,7 +57,7 @@ assign red = color_hex[23:16];
 assign green = color_hex[15:8] ; 
 assign blue = color_hex[7:0]; 
 
-assign rom_addr = bar_cnt; 
+assign rom_addr = b_cnt; 
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -69,12 +71,23 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
 	begin 
 		//Reset logic
 		if(reset_n == 1'b0) begin  
-            bar_cnt = -1; 
+            b_cnt <= 0; 
+            v_bar_cnt <=0; 
+            h_bar_cnt <=0;
         end else begin
             if(pixel_cnt <= MAX_PIXEL && line_cnt <= MAX_LINE) begin
-                if(pixel_cnt % BAR_W == 0) begin
-                    bar_cnt <= (bar_cnt + 1) % BARS; 
-                    // rom_addr <= (rom_addr + 1) % BARS; 
+                if(pixel_cnt % V_BAR_W == 0) begin
+                    v_bar_cnt <= (v_bar_cnt + 1) % BOXES; 
+                end
+
+                if(line_cnt % H_BAR_W == 0) begin
+                    h_bar_cnt <= (h_bar_cnt + 1) % BOXES; 
+                end
+
+                if(h_bar_cnt == v_bar_cnt) begin
+                    b_cnt = 0; 
+                end else begin
+                    b_cnt = 2;
                 end
                     color_hex <= rom_data; 
 

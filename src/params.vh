@@ -68,8 +68,9 @@ parameter MAX_LINE = 750;
 // Phase 2 PIXEL GEN Parameters
 //=======================================================
 
-parameter BAR_W = 160;
-parameter BARS = 8;
+parameter V_BAR_W = 160;
+parameter H_BAR_W = 94;
+parameter BOXES = 64;
 
 
 //=======================================================

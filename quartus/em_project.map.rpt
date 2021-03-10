@@ -1,5 +1,5 @@
 Analysis & Synthesis report for em_project
-Wed Mar 10 11:03:46 2021
+Wed Mar 10 11:56:15 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -15,24 +15,25 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component|altsyncram_1si1:auto_generated|altsyncram_m8k2:altsyncram1
- 14. Parameter Settings for User Entity Instance: refresh_pll_720p:REFRESH_PLL_CLK_720p|refresh_pll_720p_0002:refresh_pll_720p_inst|altera_pll:altera_pll_i
- 15. Parameter Settings for User Entity Instance: vtc:VGA_VTC
- 16. Parameter Settings for User Entity Instance: pixel_gen:PIXEL_GEN
- 17. Parameter Settings for User Entity Instance: pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component
- 18. Parameter Settings for Inferred Entity Instance: pixel_gen:PIXEL_GEN|lpm_divide:Mod0
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "pixel_gen:PIXEL_GEN|rom_p4:ROM"
- 21. Port Connectivity Checks: "refresh_pll_720p:REFRESH_PLL_CLK_720p"
- 22. Port Connectivity Checks: "reset:RESET"
- 23. In-System Memory Content Editor Settings
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
- 27. Analysis & Synthesis Suppressed Messages
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component|altsyncram_1si1:auto_generated|altsyncram_m8k2:altsyncram1
+ 15. Parameter Settings for User Entity Instance: refresh_pll_720p:REFRESH_PLL_CLK_720p|refresh_pll_720p_0002:refresh_pll_720p_inst|altera_pll:altera_pll_i
+ 16. Parameter Settings for User Entity Instance: vtc:VGA_VTC
+ 17. Parameter Settings for User Entity Instance: pixel_gen:PIXEL_GEN
+ 18. Parameter Settings for User Entity Instance: pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component
+ 19. Parameter Settings for Inferred Entity Instance: pixel_gen:PIXEL_GEN|lpm_divide:Mod0
+ 20. Parameter Settings for Inferred Entity Instance: pixel_gen:PIXEL_GEN|lpm_divide:Mod1
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "refresh_pll_720p:REFRESH_PLL_CLK_720p"
+ 23. Port Connectivity Checks: "reset:RESET"
+ 24. In-System Memory Content Editor Settings
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -59,13 +60,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 10 11:03:46 2021           ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 10 11:56:15 2021           ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                   ; em_project                                      ;
 ; Top-level Entity Name           ; em_project                                      ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 196                                             ;
+; Total registers                 ; 201                                             ;
 ; Total pins                      ; 54                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 1,536                                           ;
@@ -228,6 +229,9 @@ https://fpgasoftware.intel.com/eula.
 ; db/lpm_divide_n3m.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/lpm_divide_n3m.tdf                                              ;                  ;
 ; db/sign_div_unsign_qlh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/sign_div_unsign_qlh.tdf                                         ;                  ;
 ; db/alt_u_div_qve.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/alt_u_div_qve.tdf                                               ;                  ;
+; db/lpm_divide_m3m.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/lpm_divide_m3m.tdf                                              ;                  ;
+; db/sign_div_unsign_plh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/sign_div_unsign_plh.tdf                                         ;                  ;
+; db/alt_u_div_ove.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/alt_u_div_ove.tdf                                               ;                  ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+------------------+
 
 
@@ -236,16 +240,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 210                      ;
+; Estimate of Logic utilization (ALMs needed) ; 271                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 340                      ;
-;     -- 7 input functions                    ; 3                        ;
-;     -- 6 input functions                    ; 45                       ;
-;     -- 5 input functions                    ; 36                       ;
-;     -- 4 input functions                    ; 43                       ;
-;     -- <=3 input functions                  ; 213                      ;
+; Combinational ALUT usage for logic          ; 452                      ;
+;     -- 7 input functions                    ; 5                        ;
+;     -- 6 input functions                    ; 54                       ;
+;     -- 5 input functions                    ; 39                       ;
+;     -- 4 input functions                    ; 61                       ;
+;     -- <=3 input functions                  ; 293                      ;
 ;                                             ;                          ;
-; Dedicated logic registers                   ; 196                      ;
+; Dedicated logic registers                   ; 201                      ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 54                       ;
 ; Total MLAB memory bits                      ; 0                        ;
@@ -258,8 +262,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 187                      ;
-; Total fan-out                               ; 2315                     ;
-; Average fan-out                             ; 3.41                     ;
+; Total fan-out                               ; 2627                     ;
+; Average fan-out                             ; 3.30                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -268,12 +272,16 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+------------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                    ; Entity Name                       ; Library Name     ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+------------------+
-; |em_project                                                                                                                             ; 340 (3)             ; 196 (0)                   ; 1536              ; 0          ; 54   ; 0            ; |em_project                                                                                                                                                                                                                                                                                                                                            ; em_project                        ; work             ;
-;    |pixel_gen:PIXEL_GEN|                                                                                                                ; 177 (45)            ; 79 (28)                   ; 1536              ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN                                                                                                                                                                                                                                                                                                                        ; pixel_gen                         ; work             ;
+; |em_project                                                                                                                             ; 452 (3)             ; 201 (0)                   ; 1536              ; 0          ; 54   ; 0            ; |em_project                                                                                                                                                                                                                                                                                                                                            ; em_project                        ; work             ;
+;    |pixel_gen:PIXEL_GEN|                                                                                                                ; 289 (59)            ; 84 (33)                   ; 1536              ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN                                                                                                                                                                                                                                                                                                                        ; pixel_gen                         ; work             ;
 ;       |lpm_divide:Mod0|                                                                                                                 ; 91 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                        ; lpm_divide                        ; work             ;
 ;          |lpm_divide_n3m:auto_generated|                                                                                                ; 91 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0|lpm_divide_n3m:auto_generated                                                                                                                                                                                                                                                                          ; lpm_divide_n3m                    ; work             ;
 ;             |sign_div_unsign_qlh:divider|                                                                                               ; 91 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                                                                                                                                                                                                                                              ; sign_div_unsign_qlh               ; work             ;
 ;                |alt_u_div_qve:divider|                                                                                                  ; 91 (91)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider                                                                                                                                                                                                                        ; alt_u_div_qve                     ; work             ;
+;       |lpm_divide:Mod1|                                                                                                                 ; 98 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod1                                                                                                                                                                                                                                                                                                        ; lpm_divide                        ; work             ;
+;          |lpm_divide_m3m:auto_generated|                                                                                                ; 98 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod1|lpm_divide_m3m:auto_generated                                                                                                                                                                                                                                                                          ; lpm_divide_m3m                    ; work             ;
+;             |sign_div_unsign_plh:divider|                                                                                               ; 98 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod1|lpm_divide_m3m:auto_generated|sign_div_unsign_plh:divider                                                                                                                                                                                                                                              ; sign_div_unsign_plh               ; work             ;
+;                |alt_u_div_ove:divider|                                                                                                  ; 98 (98)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|lpm_divide:Mod1|lpm_divide_m3m:auto_generated|sign_div_unsign_plh:divider|alt_u_div_ove:divider                                                                                                                                                                                                                        ; alt_u_div_ove                     ; work             ;
 ;       |rom_p4:ROM|                                                                                                                      ; 41 (0)              ; 51 (0)                    ; 1536              ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|rom_p4:ROM                                                                                                                                                                                                                                                                                                             ; rom_p4                            ; work             ;
 ;          |altsyncram:altsyncram_component|                                                                                              ; 41 (0)              ; 51 (0)                    ; 1536              ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                             ; altsyncram                        ; work             ;
 ;             |altsyncram_1si1:auto_generated|                                                                                            ; 41 (0)              ; 51 (0)                    ; 1536              ; 0          ; 0    ; 0            ; |em_project|pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component|altsyncram_1si1:auto_generated                                                                                                                                                                                                                                              ; altsyncram_1si1                   ; work             ;
@@ -321,17 +329,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+
 
 
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; pixel_gen:PIXEL_GEN|b_cnt[0,2..5]     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 5 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 196   ;
+; Total registers                              ; 201   ;
 ; Number of registers using Synchronous Clear  ; 43    ;
 ; Number of registers using Synchronous Load   ; 25    ;
-; Number of registers using Asynchronous Clear ; 87    ;
+; Number of registers using Asynchronous Clear ; 92    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 140   ;
+; Number of registers using Clock Enable       ; 138   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -343,13 +361,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; vtc:VGA_VTC|video_on_h                                                                                                                                                                                                                                                                                                          ; 25      ;
 ; vtc:VGA_VTC|video_on_v                                                                                                                                                                                                                                                                                                          ; 25      ;
-; pixel_gen:PIXEL_GEN|bar_cnt[0]                                                                                                                                                                                                                                                                                                  ; 4       ;
-; pixel_gen:PIXEL_GEN|bar_cnt[1]                                                                                                                                                                                                                                                                                                  ; 3       ;
-; pixel_gen:PIXEL_GEN|bar_cnt[2]                                                                                                                                                                                                                                                                                                  ; 2       ;
-; pixel_gen:PIXEL_GEN|bar_cnt[3]                                                                                                                                                                                                                                                                                                  ; 1       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 3       ;
-; Total number of inverted registers = 8                                                                                                                                                                                                                                                                                          ;         ;
+; Total number of inverted registers = 4                                                                                                                                                                                                                                                                                          ;         ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -644,8 +658,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; MIN_LINE       ; 0                        ; Signed Integer  ;
 ; MAX_PIXEL      ; 1279                     ; Signed Integer  ;
 ; MAX_LINE       ; 750                      ; Signed Integer  ;
-; BAR_W          ; 160                      ; Signed Integer  ;
-; BARS           ; 8                        ; Signed Integer  ;
+; V_BAR_W        ; 160                      ; Signed Integer  ;
+; H_BAR_W        ; 94                       ; Signed Integer  ;
+; BOXES          ; 64                       ; Signed Integer  ;
 ; OFF_COLOR      ; 000000000000000000000000 ; Unsigned Binary ;
 ; MIN_RGB        ; 0                        ; Signed Integer  ;
 ; MAX_RGB        ; 255                      ; Signed Integer  ;
@@ -691,8 +706,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; MIN_LINE       ; 0                        ; Signed Integer       ;
 ; MAX_PIXEL      ; 1279                     ; Signed Integer       ;
 ; MAX_LINE       ; 750                      ; Signed Integer       ;
-; BAR_W          ; 160                      ; Signed Integer       ;
-; BARS           ; 8                        ; Signed Integer       ;
+; V_BAR_W        ; 160                      ; Signed Integer       ;
+; H_BAR_W        ; 94                       ; Signed Integer       ;
+; BOXES          ; 64                       ; Signed Integer       ;
 ; OFF_COLOR      ; 000000000000000000000000 ; Unsigned Binary      ;
 ; MIN_RGB        ; 0                        ; Signed Integer       ;
 ; MAX_RGB        ; 255                      ; Signed Integer       ;
@@ -801,6 +817,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: pixel_gen:PIXEL_GEN|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                    ;
+; LPM_WIDTHD             ; 7              ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_m3m ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                           ;
 +-------------------------------------------+----------------------------------------------------------------+
@@ -819,15 +858,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                           ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                      ;
 +-------------------------------------------+----------------------------------------------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "pixel_gen:PIXEL_GEN|rom_p4:ROM" ;
-+---------------+-------+----------+-------------------------+
-; Port          ; Type  ; Severity ; Details                 ;
-+---------------+-------+----------+-------------------------+
-; address[5..4] ; Input ; Info     ; Stuck at GND            ;
-+---------------+-------+----------+-------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -862,39 +892,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 110                         ;
-;     CLR               ; 28                          ;
+; arriav_ff             ; 115                         ;
+;     CLR               ; 35                          ;
 ;     ENA               ; 8                           ;
-;     ENA CLR           ; 14                          ;
+;     ENA CLR           ; 12                          ;
 ;     ENA CLR SCLR      ; 12                          ;
 ;     ENA SCLR          ; 24                          ;
 ;     ENA SLD           ; 24                          ;
-; arriav_lcell_comb     ; 243                         ;
-;     arith             ; 68                          ;
-;         0 data inputs ; 8                           ;
-;         1 data inputs ; 28                          ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 9                           ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 164                         ;
+; arriav_lcell_comb     ; 355                         ;
+;     arith             ; 118                         ;
+;         0 data inputs ; 18                          ;
+;         1 data inputs ; 33                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 21                          ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 216                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 38                          ;
-;         3 data inputs ; 53                          ;
-;         4 data inputs ; 20                          ;
-;         5 data inputs ; 16                          ;
-;         6 data inputs ; 29                          ;
-;     shared            ; 9                           ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 8                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 65                          ;
+;         3 data inputs ; 65                          ;
+;         4 data inputs ; 26                          ;
+;         5 data inputs ; 19                          ;
+;         6 data inputs ; 38                          ;
+;     shared            ; 17                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 15                          ;
 ; boundary_port         ; 81                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.30                       ;
-; Average LUT depth     ; 4.83                        ;
+; Max LUT depth         ; 13.60                       ;
+; Average LUT depth     ; 6.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -903,7 +933,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -913,7 +943,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Wed Mar 10 11:02:55 2021
+    Info: Processing started: Wed Mar 10 11:55:25 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off em_project -c em_project
 Warning (125092): Tcl Script File refresh_pll.qip not found
     Info (125063): set_global_assignment -name QIP_FILE refresh_pll.qip
@@ -1016,9 +1046,9 @@ Warning (10230): Verilog HDL assignment warning at vtc.sv(72): truncated value w
 Warning (10230): Verilog HDL assignment warning at vtc.sv(77): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 77
 Warning (10230): Verilog HDL assignment warning at vtc.sv(79): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 79
 Info (12128): Elaborating entity "pixel_gen" for hierarchy "pixel_gen:PIXEL_GEN" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 212
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(72): truncated value with size 32 to match size of target (4) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 72
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(76): truncated value with size 32 to match size of target (4) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 76
-Info (12128): Elaborating entity "rom_p4" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4:ROM" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 42
+Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(80): truncated value with size 32 to match size of target (4) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(84): truncated value with size 32 to match size of target (4) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 84
+Info (12128): Elaborating entity "rom_p4" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4:ROM" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 44
 Info (12128): Elaborating entity "altsyncram" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_p4.v Line: 82
 Info (12130): Elaborated megafunction instantiation "pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_p4.v Line: 82
 Info (12133): Instantiated megafunction "pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_p4.v Line: 82
@@ -1050,7 +1080,7 @@ Warning (113031): 8 out of 64 addresses are reinitialized. The latest initialize
     Warning (113030): Memory Initialization File address 5 is reinitialized File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/ Line: 36
     Warning (113030): Memory Initialization File address 6 is reinitialized File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/ Line: 37
     Warning (113030): Memory Initialization File address 7 is reinitialized File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/ Line: 38
-    Warning (113030): Memory Initialization File address 8 is reinitialized File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/ Line: 39
+    Warning (113030): Memory Initialization File address 8 is reinitialized File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/ Line: 40
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component|altsyncram_1si1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/altsyncram_1si1.tdf Line: 36
 Info (12130): Elaborated megafunction instantiation "pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component|altsyncram_1si1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/altsyncram_1si1.tdf Line: 36
 Info (12133): Instantiated megafunction "pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component|altsyncram_1si1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/altsyncram_1si1.tdf Line: 36
@@ -1066,7 +1096,7 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "pixe
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component|altsyncram_1si1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4:ROM|altsyncram:altsyncram_component|altsyncram_1si1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr" File: c:/intelfpga/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 799
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2021.03.10.11:03:27 Progress: Loading sld6053f129/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2021.03.10.11:55:56 Progress: Loading sld6053f129/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1089,10 +1119,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/ip/sld6053f129/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld6053f129/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/ip/sld6053f129/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixel_gen:PIXEL_GEN|Mod0" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 75
-Info (12130): Elaborated megafunction instantiation "pixel_gen:PIXEL_GEN|lpm_divide:Mod0" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 75
-Info (12133): Instantiated megafunction "pixel_gen:PIXEL_GEN|lpm_divide:Mod0" with the following parameter: File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 75
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixel_gen:PIXEL_GEN|Mod0" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 79
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "pixel_gen:PIXEL_GEN|Mod1" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 83
+Info (12130): Elaborated megafunction instantiation "pixel_gen:PIXEL_GEN|lpm_divide:Mod0" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 79
+Info (12133): Instantiated megafunction "pixel_gen:PIXEL_GEN|lpm_divide:Mod0" with the following parameter: File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 79
     Info (12134): Parameter "LPM_WIDTHN" = "12"
     Info (12134): Parameter "LPM_WIDTHD" = "8"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1103,6 +1134,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
     Info (12023): Found entity 1: alt_u_div_qve File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/alt_u_div_qve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "pixel_gen:PIXEL_GEN|lpm_divide:Mod1" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 83
+Info (12133): Instantiated megafunction "pixel_gen:PIXEL_GEN|lpm_divide:Mod1" with the following parameter: File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 83
+    Info (12134): Parameter "LPM_WIDTHN" = "12"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m3m.tdf
+    Info (12023): Found entity 1: lpm_divide_m3m File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/lpm_divide_m3m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_plh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_plh File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/sign_div_unsign_plh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/alt_u_div_ove.tdf Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
     Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 21
@@ -1140,15 +1183,15 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
     Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 18
-Info (21057): Implemented 509 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 620 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 40 output pins
-    Info (21061): Implemented 425 logic cells
+    Info (21061): Implemented 536 logic cells
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Wed Mar 10 11:03:46 2021
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Wed Mar 10 11:56:16 2021
     Info: Elapsed time: 00:00:51
     Info: Total CPU time (on all processors): 00:01:22
 
