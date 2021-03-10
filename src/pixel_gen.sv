@@ -14,14 +14,6 @@ module pixel_gen(
     input h_sync, 
     input v_sync,
 
-    //Phase 2 Inputs
-    input move_box1,
-    input dColor_box1, 
-    input move_box2,
-    input dColor_box2, 
-    input [4:0] move_dir,
-    input speed, 
-
     output [7:0] p_red, 
     output [7:0] p_green, 
     output [7:0] p_blue 
@@ -39,6 +31,16 @@ logic [23:0] color_hex;
 
 logic [3:0] bar_cnt; 
 
+//ROM Declarations
+logic [5:0] rom_addr;
+logic [23:0] rom_data; 
+
+//=======================================================
+//  Module declarations
+//=======================================================
+
+rom_p4 ROM(.address(rom_addr), .clock(rfr_clk), .q(rom_data)); 
+
 //=======================================================
 //  Assignments
 //=======================================================
@@ -53,6 +55,7 @@ assign red = color_hex[23:16];
 assign green = color_hex[15:8] ; 
 assign blue = color_hex[7:0]; 
 
+assign rom_addr = bar_cnt; 
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -66,33 +69,15 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
 	begin 
 		//Reset logic
 		if(reset_n == 1'b0) begin  
-            bar_cnt = 0; 
+            bar_cnt = -1; 
         end else begin
             if(pixel_cnt <= MAX_PIXEL && line_cnt <= MAX_LINE) begin
                 if(pixel_cnt % BAR_W == 0) begin
                     bar_cnt <= (bar_cnt + 1) % BARS; 
+                    // rom_addr <= (rom_addr + 1) % BARS; 
                 end
+                    color_hex <= rom_data; 
 
-
-                case(pixel_cnt)
-                    (0): color_hex <= RED;
-                    (MAX_PIXEL/16): color_hex <= ORANGE;
-                    (2*MAX_PIXEL/16): color_hex <= YELLOW;
-                    (3*MAX_PIXEL/16): color_hex <= GREEN;
-                    (4*MAX_PIXEL/16): color_hex <= BLUE;
-                    (5*MAX_PIXEL/16): color_hex <= INDIGO;
-                    (6*MAX_PIXEL/16): color_hex <= VIOLET;
-                    (7*MAX_PIXEL/16): color_hex <= BLACK;
-                    (8*MAX_PIXEL/16): color_hex <= WHITE; 
-                    (9*MAX_PIXEL/16): color_hex <= VIOLET;
-                    (10*MAX_PIXEL/16): color_hex <= INDIGO; 
-                    (11*MAX_PIXEL/16): color_hex <= BLUE;
-                    (12*MAX_PIXEL/16): color_hex <= GREEN;
-                    (13*MAX_PIXEL/16): color_hex <= YELLOW;
-                    (14*MAX_PIXEL/16): color_hex <= ORANGE;
-                    (15*MAX_PIXEL/16): color_hex <= RED;
-                   
-                endcase
             end else begin
                 color_hex <= BLACK;
             end

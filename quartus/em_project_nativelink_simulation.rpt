@@ -1,5 +1,5 @@
 Info: Start Nativelink Simulation process
-executing command line: ip-make-simscript --nativelink-mode --output-directory=em_project_iputf_input --spd=C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll.spd 
+executing command line: ip-make-simscript --nativelink-mode --output-directory=em_project_iputf_input --spd=C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_720p.spd --spd=C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_1080p.spd 
 
 ========= EDA Simulation Settings =====================
 

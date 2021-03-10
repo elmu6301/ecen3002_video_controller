@@ -206,14 +206,6 @@ pixel_gen PIXEL_GEN(.rfr_clk(rfr_clk),
 					.h_sync(h_sync),
 					.v_sync(v_sync), 
 					
-					//Phase 2 Inputs
-					.dColor_box1(SW[8]),
-					.move_box1(SW[1]),
-					.dColor_box2(SW[7]),
-					.move_box2(SW[2]),
-					.move_dir(~KEY[3:0]),
-					.speed(SW[9]),
-
 					.p_red(red),
 					.p_green(green),
 					.p_blue(blue)

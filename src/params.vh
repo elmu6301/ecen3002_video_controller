@@ -4,7 +4,7 @@
     Elena Murray
 
 */
-`define highres
+// `define highres
 
 //=======================================================
 // TOP/All Module Parameters
@@ -68,8 +68,8 @@ parameter MAX_LINE = 750;
 // Phase 2 PIXEL GEN Parameters
 //=======================================================
 
-parameter BAR_W = 80;
-parameter BARS = 16;
+parameter BAR_W = 160;
+parameter BARS = 8;
 
 
 //=======================================================
