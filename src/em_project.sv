@@ -156,10 +156,15 @@ assign VGA_B = blue;
 
 //Assign LED 
 assign LEDR[0] = ext_reset_n; //Indicates not in reset
-assign LEDR[2:1] = SW[2:1]; //Indicates if boxes are  in move states
-assign LEDR[8:7] = SW[8:7]; //Indicates if the box should change color
-assign LEDR[9] = SW[9]; //Indicates if the speed should be slow (0) or fast(1)
-
+// assign LEDR[2:1] = SW[2:1]; //Indicates if boxes are  in move states
+// assign LEDR[8:7] = SW[8:7]; //Indicates if the box should change color
+// assign LEDR[9] = SW[9]; //Indicates if the speed should be slow (0) or fast(1)
+assign LEDR[8:1] = 7'b0; 
+`ifdef highres
+assign LEDR[9] = 1'b1; 
+`else
+assign LEDR[9] = 1'b0;
+`endif
 //=======================================================
 //  Module declarations
 //=======================================================
@@ -170,9 +175,17 @@ reset RESET(.clock(rfr_clk),
 			.lock(1'b1), 
 			.reset_n(reset_n)
 			); 
+
+//PLL Clock Source Selection
+`ifdef highres 
+   //1080p - 148.5 MHz Clock Module
+	refresh_pll_1080p REFRESH_PLL_CLK_1080p(.refclk(CLOCK_50), .rst(reset_p), .outclk_0(rfr_clk), .locked(locked)); 
+`else
+    //720p - 74.25 MHz Clock Module
+	refresh_pll_720p REFRESH_PLL_CLK_720p(.refclk(CLOCK_50), .rst(reset_p), .outclk_0(rfr_clk), .locked(locked)); 
+
+`endif
 			
-//74.25 MHz Clock Module
-refresh_pll REFRESH_PLL_CLK(.refclk(CLOCK_50), .rst(reset_p), .outclk_0(rfr_clk), .locked(locked)); 
 
 //Video Controller Module
 vtc VGA_VTC(.rfr_clk(rfr_clk),

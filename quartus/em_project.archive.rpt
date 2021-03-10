@@ -1,5 +1,5 @@
 Archive Project report for em_project
-Thu Feb 18 13:48:20 2021
+Fri Feb 26 19:48:05 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Thu Feb 18 13:48:20 2021 ;
+; Archive Project Status ; Successful - Fri Feb 26 19:48:05 2021 ;
 ; Revision Name          ; em_project                            ;
 ; Top-level Entity Name  ; em_project                            ;
 ; Family                 ; Cyclone V                             ;
@@ -54,16 +54,16 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory C:/Users/elena/Documents/quartus_workspace/em_project/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_phase1.qar'
+Info: Generated archive 'C:/Users/elena/Documents/quartus_workspace/em_project/quartus/em_project_phase3.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'em_project.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Thu Feb 18 13:48:20 2021
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:16
+Info: Quartus Prime Shell was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Fri Feb 26 19:48:05 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +-------------------------------------------------------------------------+
@@ -87,14 +87,22 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; em_project.SDC                                                          ;
 ; em_project.sdc                                                          ;
 ; em_project_assignment_defaults.qdf                                      ;
-; refresh_pll.cmp                                                         ;
-; refresh_pll.qip                                                         ;
-; refresh_pll.sip                                                         ;
-; refresh_pll.spd                                                         ;
-; refresh_pll.v                                                           ;
-; refresh_pll/refresh_pll_0002.qip                                        ;
-; refresh_pll/refresh_pll_0002.v                                          ;
-; refresh_pll_sim/refresh_pll.vo                                          ;
+; refresh_pll_720p.cmp                                                    ;
+; refresh_pll_720p.qip                                                    ;
+; refresh_pll_720p.sip                                                    ;
+; refresh_pll_720p.spd                                                    ;
+; refresh_pll_720p.v                                                      ;
+; refresh_pll_720p/refresh_pll_720p_0002.qip                              ;
+; refresh_pll_720p/refresh_pll_720p_0002.v                                ;
+; refresh_pll_720p_sim/refresh_pll_720p.vo                                ;
+; refresh_pll_1080p.cmp                                                   ;
+; refresh_pll_1080p.qip                                                   ;
+; refresh_pll_1080p.sip                                                   ;
+; refresh_pll_1080p.spd                                                   ;
+; refresh_pll_1080p.v                                                     ;
+; refresh_pll_1080p/refresh_pll_1080p_0002.qip                            ;
+; refresh_pll_1080p/refresh_pll_1080p_0002.v                              ;
+; refresh_pll_1080p_sim/refresh_pll_1080p.vo                              ;
 +-------------------------------------------------------------------------+
 
 
