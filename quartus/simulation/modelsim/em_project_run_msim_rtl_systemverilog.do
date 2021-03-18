@@ -28,10 +28,12 @@ vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_projec
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 
 add wave *
-add wave -position end  sim:/tb/DUT/PIXEL_GEN/rom_addr
-add wave -position end  sim:/tb/DUT/PIXEL_GEN/bar_cnt
+add wave -position end  sim:/tb/DUT/PIXEL_GEN/b_cnt
+add wave -position end  sim:/tb/DUT/PIXEL_GEN/v_bar_cnt
+add wave -position end  sim:/tb/DUT/PIXEL_GEN/h_bar_cnt
 add wave -position end  sim:/tb/DUT/PIXEL_GEN/pixel_cnt
 add wave -position end  sim:/tb/DUT/PIXEL_GEN/line_cnt
+add wave -position end  sim:/tb/DUT/PIXEL_GEN/temp
 view structure
 view signals
 run -all

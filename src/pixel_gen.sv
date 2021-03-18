@@ -29,8 +29,8 @@ module pixel_gen(
 logic [7:0] red, green, blue;
 logic [23:0] color_hex;  
 
-logic [3:0] v_bar_cnt; 
-logic [3:0] h_bar_cnt; 
+logic [5:0] v_bar_cnt; 
+logic [5:0] h_bar_cnt; 
 logic [5:0] b_cnt; 
 
 //ROM Declarations
@@ -72,24 +72,23 @@ always_ff @ (posedge rfr_clk, negedge reset_n)
 		//Reset logic
 		if(reset_n == 1'b0) begin  
             b_cnt <= 0; 
-            v_bar_cnt <=0; 
-            h_bar_cnt <=0;
+            v_bar_cnt <= -1; 
+            h_bar_cnt <= 0;
         end else begin
             if(pixel_cnt <= MAX_PIXEL && line_cnt <= MAX_LINE) begin
                 if(pixel_cnt % V_BAR_W == 0) begin
                     v_bar_cnt <= (v_bar_cnt + 1) % BOXES; 
+                    b_cnt <= (v_bar_cnt + h_bar_cnt) % BOXES; 
+                    // b_cnt <= (b_cnt + 1) % BOXES; 
                 end
 
-                if(line_cnt % H_BAR_W == 0) begin
+                if(pixel_cnt == MAX_PIXEL && line_cnt % H_BAR_W == 0) begin
                     h_bar_cnt <= (h_bar_cnt + 1) % BOXES; 
                 end
 
-                if(h_bar_cnt == v_bar_cnt) begin
-                    b_cnt = 0; 
-                end else begin
-                    b_cnt = 2;
-                end
-                    color_hex <= rom_data; 
+                
+                // endcase
+                color_hex <= rom_data; 
 
             end else begin
                 color_hex <= BLACK;

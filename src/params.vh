@@ -70,7 +70,7 @@ parameter MAX_LINE = 750;
 
 parameter V_BAR_W = 160;
 parameter H_BAR_W = 94;
-parameter BOXES = 64;
+parameter BOXES = 8;
 
 
 //=======================================================
