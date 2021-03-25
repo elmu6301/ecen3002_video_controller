@@ -1,5 +1,5 @@
 Flow report for em_project
-Thu Mar 25 12:23:38 2021
+Thu Mar 25 14:14:32 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Mar 25 12:23:38 2021           ;
+; Flow Status                     ; Successful - Thu Mar 25 14:14:32 2021           ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                   ; em_project                                      ;
 ; Top-level Entity Name           ; em_project                                      ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/25/2021 12:19:16 ;
+; Start date & time ; 03/25/2021 14:10:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; em_project          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+--------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                      ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+--------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 10995770589191.161669635612620             ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 10995770589191.161670664001760             ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                         ; --            ; --          ; tb             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb                                         ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                          ; --            ; --          ; eda_simulation ;
@@ -97,6 +97,7 @@ https://fpgasoftware.intel.com/eula.
 ; MISC_FILE                            ; refresh_pll_1080p_sim/refresh_pll_1080p.vo ; --            ; --          ; --             ;
 ; MISC_FILE                            ; rom_p4_bb.v                                ; --            ; --          ; --             ;
 ; MISC_FILE                            ; rom_p4b_bb.v                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; rom_2x2_bb.v                               ; --            ; --          ; --             ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family)     ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)     ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)     ; --            ; --          ; Top            ;
@@ -116,12 +117,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:50     ; 1.0                     ; 4927 MB             ; 00:01:22                           ;
-; Fitter               ; 00:02:34     ; 1.1                     ; 6343 MB             ; 00:04:17                           ;
-; Assembler            ; 00:00:15     ; 1.0                     ; 4881 MB             ; 00:00:16                           ;
-; Timing Analyzer      ; 00:00:25     ; 1.4                     ; 5212 MB             ; 00:00:32                           ;
-; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 4852 MB             ; 00:00:06                           ;
-; Total                ; 00:04:11     ; --                      ; --                  ; 00:06:33                           ;
+; Analysis & Synthesis ; 00:00:53     ; 1.0                     ; 4919 MB             ; 00:01:27                           ;
+; Fitter               ; 00:02:10     ; 1.1                     ; 6353 MB             ; 00:03:49                           ;
+; Assembler            ; 00:00:13     ; 1.0                     ; 4882 MB             ; 00:00:12                           ;
+; Timing Analyzer      ; 00:00:20     ; 1.4                     ; 5212 MB             ; 00:00:25                           ;
+; EDA Netlist Writer   ; 00:00:06     ; 1.0                     ; 4852 MB             ; 00:00:05                           ;
+; Total                ; 00:03:42     ; --                      ; --                  ; 00:05:58                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

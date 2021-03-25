@@ -17,7 +17,7 @@ vmap work rtl_work
 vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_720p_sim/refresh_pll_720p.vo"  
 vlog "C:/Users/elena/Documents/quartus_workspace/em_project/quartus/refresh_pll_1080p_sim/refresh_pll_1080p.vo"
 
-vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_p4b.v}
+vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/quartus {C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_2x2.v}
 vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/reset.sv}
 vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv}
 vlog -sv -work work +incdir+C:/Users/elena/Documents/quartus_workspace/em_project/src {C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv}
@@ -30,9 +30,12 @@ vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lns
 add wave *
 add wave -position end  sim:/tb/DUT/PIXEL_GEN/pixel_cnt
 add wave -position end  sim:/tb/DUT/PIXEL_GEN/line_cnt
-add wave -position end  sim:/tb/DUT/PIXEL_GEN/h_pixel_cnt
+
 add wave -position end  sim:/tb/DUT/PIXEL_GEN/v_pixel_offset
+add wave -position end  sim:/tb/DUT/PIXEL_GEN/h_pixel_cnt
+
 add wave -position end  sim:/tb/DUT/PIXEL_GEN/rom_addr
+add wave -position end  sim:/tb/DUT/PIXEL_GEN/color_hex
 view structure
 view signals
 run -all

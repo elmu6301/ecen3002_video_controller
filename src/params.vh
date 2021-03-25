@@ -4,7 +4,9 @@
     Elena Murray
 
 */
+//Active definitions
 // `define highres
+//  `define pixel2x2
 
 //=======================================================
 // TOP/All Module Parameters
@@ -67,12 +69,21 @@ parameter MAX_LINE = 750;
 //=======================================================
 // Phase 4B PIXEL GEN Parameters
 //=======================================================
+`ifdef pixel2x2
+/*---- 2x2 Resolution ----*/
+parameter PIXEL_BITS = 17; 
+parameter PIXELS_PER_LINE = 640; 
+parameter CTR_LOWEST_BIT = 1;
+parameter ROM_DATA_SIZE = 11; 
 
-parameter PIXEL_SIZE = 4; 
+`else 
+/*---- Default 4x4 Resolution ----*/
+parameter PIXEL_BITS = 15; 
 parameter PIXELS_PER_LINE = 320; 
-
 parameter CTR_LOWEST_BIT = 2;
+parameter ROM_DATA_SIZE = 23; 
 
+`endif
 //=======================================================
 // Color Parameters
 //=======================================================

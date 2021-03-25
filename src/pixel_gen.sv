@@ -30,20 +30,21 @@ module pixel_gen(
 logic [7:0] red, green, blue;
 logic [23:0] color_hex;  
 
-logic [15:0] v_pixel_offset; 
-logic [15:0] h_pixel_cnt; 
-logic [15:0] p_cnt; 
+logic [PIXEL_BITS:0] v_pixel_offset; 
+logic [PIXEL_BITS:0] h_pixel_cnt;  
 
 //ROM Declarations
-logic [15:0] rom_addr;
-logic [23:0] rom_data; 
+logic [PIXEL_BITS:0] rom_addr;
+logic [ROM_DATA_SIZE:0] rom_data; 
 
 //=======================================================
 //  Module declarations
 //=======================================================
-
-rom_p4b ROM(.address(rom_addr), .clock(rfr_clk), .q(rom_data)); 
-
+`ifdef pixel2x2 
+    rom_2x2 ROM(.address(rom_addr), .clock(rfr_clk), .q(rom_data)); 
+`else
+    rom_p4b ROM(.address(rom_addr), .clock(rfr_clk), .q(rom_data)); 
+`endif
 //=======================================================
 //  Assignments
 //=======================================================
@@ -53,15 +54,27 @@ assign p_red = red & {8{video_on}};
 assign p_green = green  & {8{video_on}}; 
 assign p_blue = blue & {8{video_on}}; 
 
-//Break out the hex color code into RGB values
-assign red = color_hex[23:16]; 
-assign green = color_hex[15:8] ; 
-assign blue = color_hex[7:0]; 
 
-assign h_pixel_cnt = pixel_cnt[PIXEL_CTR_W:CTR_LOWEST_BIT]; 
-assign v_pixel_offset = line_cnt[LINE_CTR_W:CTR_LOWEST_BIT] * PIXELS_PER_LINE; 
-assign rom_addr = (h_pixel_cnt + v_pixel_offset); 
+`ifdef pixel2x2 
+    assign h_pixel_cnt = pixel_cnt[PIXEL_CTR_W:CTR_LOWEST_BIT]; 
+    assign v_pixel_offset = line_cnt[LINE_CTR_W:CTR_LOWEST_BIT] * PIXELS_PER_LINE; 
+    assign rom_addr = (h_pixel_cnt + v_pixel_offset); 
 
+    //Break out the hex color code into RGB values
+    assign red = {color_hex[11:8], 4'b0}; 
+    assign green = {color_hex[7:4], 4'b0};  
+    assign blue = {color_hex[3:0], 4'b0}; 
+
+`else
+    assign h_pixel_cnt = pixel_cnt[PIXEL_CTR_W:CTR_LOWEST_BIT]; 
+    assign v_pixel_offset = line_cnt[LINE_CTR_W:CTR_LOWEST_BIT] * PIXELS_PER_LINE; 
+    assign rom_addr = (h_pixel_cnt + v_pixel_offset); 
+
+    //Break out the hex color code into RGB values
+    assign red = color_hex[23:16]; 
+    assign green = color_hex[15:8]; 
+    assign blue = color_hex[7:0]; 
+`endif
 //=======================================================
 //  Structural coding
 //=======================================================

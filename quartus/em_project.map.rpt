@@ -1,5 +1,5 @@
 Analysis & Synthesis report for em_project
-Thu Mar 25 12:20:06 2021
+Thu Mar 25 14:11:34 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -27,8 +27,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
  19. Port Connectivity Checks: "reset:RESET"
  20. In-System Memory Content Editor Settings
  21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 22. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -55,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Mar 25 12:20:06 2021           ;
+; Analysis & Synthesis Status     ; Successful - Thu Mar 25 14:11:33 2021           ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                   ; em_project                                      ;
 ; Top-level Entity Name           ; em_project                                      ;
@@ -221,15 +222,6 @@ https://fpgasoftware.intel.com/eula.
 ; db/ip/sld6053f129/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/ip/sld6053f129/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab      ;
 ; db/ip/sld6053f129/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/ip/sld6053f129/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab      ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                               ;                  ;
-; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                                 ;                  ;
-; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga/20.1/quartus/libraries/megafunctions/abs_divider.inc                                                                ;                  ;
-; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                            ;                  ;
-; db/lpm_divide_n3m.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/lpm_divide_n3m.tdf                                              ;                  ;
-; db/sign_div_unsign_qlh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/sign_div_unsign_qlh.tdf                                         ;                  ;
-; db/alt_u_div_qve.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/alt_u_div_qve.tdf                                               ;                  ;
-; db/lpm_divide_m3m.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/lpm_divide_m3m.tdf                                              ;                  ;
-; db/sign_div_unsign_plh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/sign_div_unsign_plh.tdf                                         ;                  ;
-; db/alt_u_div_ove.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/elena/Documents/quartus_workspace/em_project/quartus/db/alt_u_div_ove.tdf                                               ;                  ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+------------------+
 
 
@@ -350,19 +342,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |em_project|vtc:VGA_VTC|l_ctr[9]                                                                                                                                                                           ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                        ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[6]                                                   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[0] ;
-; 9:1                ; 24 bits   ; 144 LEs       ; 120 LEs              ; 24 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|color_hex[13]                                                                                                                                                              ;
-; 10:1               ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                   ;
-; 18:1               ; 4 bits    ; 48 LEs        ; 36 LEs               ; 12 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |em_project|vtc:VGA_VTC|l_ctr[9]                                                                                                                                                                                                                                                                                                                                     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                                                                                                                                                                                  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[6]                                                                                                                                                                                                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|word_counter[0]                                                                                                                                                           ;
+; 9:1                ; 24 bits   ; 144 LEs       ; 120 LEs              ; 24 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|color_hex[13]                                                                                                                                                                                                                                                                                                                        ;
+; 10:1               ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                                                                                                                                                                             ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 36 LEs               ; 12 LEs                 ; Yes        ; |em_project|pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr|WORD_SR[0]                                                                                                                                                                ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |em_project|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]                             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |em_project|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[0]                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |em_project|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[1]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |em_project|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[2]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |em_project|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[0] ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |em_project|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[2]                      ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |em_project|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -642,9 +641,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; MIN_LINE        ; 0                        ; Signed Integer  ;
 ; MAX_PIXEL       ; 1279                     ; Signed Integer  ;
 ; MAX_LINE        ; 750                      ; Signed Integer  ;
-; PIXEL_SIZE      ; 4                        ; Signed Integer  ;
+; PIXEL_BITS      ; 15                       ; Signed Integer  ;
 ; PIXELS_PER_LINE ; 320                      ; Signed Integer  ;
 ; CTR_LOWEST_BIT  ; 2                        ; Signed Integer  ;
+; ROM_DATA_SIZE   ; 23                       ; Signed Integer  ;
 ; OFF_COLOR       ; 000000000000000000000000 ; Unsigned Binary ;
 ; MIN_RGB         ; 0                        ; Signed Integer  ;
 ; MAX_RGB         ; 255                      ; Signed Integer  ;
@@ -816,13 +816,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
++------------------------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
++-----------------------+------------------------------------------+
+; Type                  ; Count                                    ;
++-----------------------+------------------------------------------+
+; arriav_ff             ; 86                                       ;
+;     CLR               ; 5                                        ;
+;     ENA               ; 30                                       ;
+;     ENA CLR           ; 27                                       ;
+;     ENA CLR SLD       ; 1                                        ;
+;     SCLR              ; 7                                        ;
+;     plain             ; 16                                       ;
+; arriav_lcell_comb     ; 98                                       ;
+;     extend            ; 1                                        ;
+;         7 data inputs ; 1                                        ;
+;     normal            ; 97                                       ;
+;         0 data inputs ; 1                                        ;
+;         1 data inputs ; 4                                        ;
+;         2 data inputs ; 21                                       ;
+;         3 data inputs ; 21                                       ;
+;         4 data inputs ; 14                                       ;
+;         5 data inputs ; 20                                       ;
+;         6 data inputs ; 16                                       ;
+; boundary_port         ; 103                                      ;
+;                       ;                                          ;
+; Max LUT depth         ; 3.00                                     ;
+; Average LUT depth     ; 1.41                                     ;
++-----------------------+------------------------------------------+
+
+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:01     ;
+; sld_hub:auto_hub ; 00:00:01     ;
++------------------+--------------+
 
 
 +-------------------------------+
@@ -831,7 +862,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
-    Info: Processing started: Thu Mar 25 12:19:14 2021
+    Info: Processing started: Thu Mar 25 14:10:38 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off em_project -c em_project
 Warning (125092): Tcl Script File refresh_pll.qip not found
     Info (125063): set_global_assignment -name QIP_FILE refresh_pll.qip
@@ -861,6 +892,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file rom_p4.
     Info (12023): Found entity 1: rom_p4 File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_p4.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file rom_p4b.v
     Info (12023): Found entity 1: rom_p4b File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_p4b.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file rom_2x2.v
+    Info (12023): Found entity 1: rom_2x2 File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_2x2.v Line: 40
 Info (12127): Elaborating entity "em_project" for the top level hierarchy
 Info (12128): Elaborating entity "reset" for hierarchy "reset:RESET" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 177
 Info (12128): Elaborating entity "refresh_pll_720p" for hierarchy "refresh_pll_720p:REFRESH_PLL_CLK_720p" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 185
@@ -936,8 +969,8 @@ Warning (10230): Verilog HDL assignment warning at vtc.sv(72): truncated value w
 Warning (10230): Verilog HDL assignment warning at vtc.sv(77): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 77
 Warning (10230): Verilog HDL assignment warning at vtc.sv(79): truncated value with size 32 to match size of target (12) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/vtc.sv Line: 79
 Info (12128): Elaborating entity "pixel_gen" for hierarchy "pixel_gen:PIXEL_GEN" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 212
-Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(62): truncated value with size 32 to match size of target (16) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 62
-Info (12128): Elaborating entity "rom_p4b" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4b:ROM" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at pixel_gen.sv(70): truncated value with size 32 to match size of target (16) File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 70
+Info (12128): Elaborating entity "rom_p4b" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4b:ROM" File: C:/Users/elena/Documents/quartus_workspace/em_project/src/pixel_gen.sv Line: 46
 Info (12128): Elaborating entity "altsyncram" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_p4b.v Line: 82
 Info (12130): Elaborated megafunction instantiation "pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component" File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_p4b.v Line: 82
 Info (12133): Instantiated megafunction "pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/elena/Documents/quartus_workspace/em_project/quartus/rom_p4b.v Line: 82
@@ -985,7 +1018,7 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "pixe
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "pixel_gen:PIXEL_GEN|rom_p4b:ROM|altsyncram:altsyncram_component|altsyncram_a2j1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr" File: c:/intelfpga/20.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 799
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2021.03.25.12:19:47 Progress: Loading sld6053f129/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2021.03.25.14:11:12 Progress: Loading sld6053f129/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1021,6 +1054,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 52
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/elena/Documents/quartus_workspace/em_project/src/em_project.sv Line: 58
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Warning (20013): Ignored 16 assignments for entity "refresh_pll_1080p" -- entity does not exist in design
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_pll -entity refresh_pll_1080p -sip refresh_pll_1080p.sip -library lib_refresh_pll_1080p was ignored
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 20.1 -entity refresh_pll_1080p -sip refresh_pll_1080p.sip -library lib_refresh_pll_1080p was ignored
@@ -1051,9 +1085,9 @@ Info (21057): Implemented 708 device resources after synthesis - the final resou
     Info (21064): Implemented 192 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 4927 megabytes
-    Info: Processing ended: Thu Mar 25 12:20:07 2021
-    Info: Elapsed time: 00:00:53
-    Info: Total CPU time (on all processors): 00:01:24
+    Info: Peak virtual memory: 4919 megabytes
+    Info: Processing ended: Thu Mar 25 14:11:34 2021
+    Info: Elapsed time: 00:00:56
+    Info: Total CPU time (on all processors): 00:01:29
 
 
