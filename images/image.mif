@@ -1,0 +1,50 @@
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+% DEPTH and WIDTH are decimal values %
+% RADIX values can be BIN, DEC, or HEX %
+% Address : Data %
+% [A0..Ax] : D , address range 0 to x contain value D (each address gets this value %
+% [A0..Ax] : D0 D1 , A0 gets D0, A1 gets D1, A2 gets D0, etc %
+% A : D0 D1 D2 , address A gets D0, address+1 gets D1, etc %
+DEPTH = 57600;
+WIDTH = 24;
+ADDRESS_RADIX = DEC;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+% Red, Green, Blue %
+0 : ffffff;
+1 : ff0000;
+2 : ff8000; 
+3 : ffff00;
+4 : 00ff00;
+5 : 0000ff;
+6 : 5000ff;
+7 : 9000ff;
+15 : ffffff;
+14: ff0000;
+13 : ff8000; 
+12 : ffff00;
+11 : 00ff00;
+10 : 0000ff;
+9 : 5000ff;
+8 : 9000ff;
+
+
+[16..57599] : 000000;
+END;

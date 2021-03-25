@@ -65,13 +65,13 @@ parameter MAX_LINE = 750;
 
 
 //=======================================================
-// Phase 2 PIXEL GEN Parameters
+// Phase 4B PIXEL GEN Parameters
 //=======================================================
 
-parameter V_BAR_W = 160;
-parameter H_BAR_W = 94;
-parameter BOXES = 8;
+parameter PIXEL_SIZE = 4; 
+parameter PIXELS_PER_LINE = 320; 
 
+parameter CTR_LOWEST_BIT = 2;
 
 //=======================================================
 // Color Parameters
