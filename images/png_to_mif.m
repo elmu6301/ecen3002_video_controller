@@ -3,18 +3,18 @@ clear all
 close all
 
 % Variables for 2x2
-% max_h_pix = 639; 
-% max_v_pix = 359; 
-% num_bytes = 1; 
-% depth = 230400; 
-% width = 12; 
+max_h_pix = 639; 
+max_v_pix = 359; 
+num_bytes = 1; 
+depth = 230400; 
+width = 12; 
 
 % Variables for 4x4
-max_h_pix = 319; 
-max_v_pix = 179; 
-num_bytes = 2;  
-depth = 57600; 
-width = 24; 
+% max_h_pix = 319; 
+% max_v_pix = 179; 
+% num_bytes = 2;  
+% depth = 57600; 
+% width = 24; 
 I = imread('rainbow_pattern_640.png');
 
 %imshow(I)

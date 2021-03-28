@@ -6,7 +6,7 @@
 */
 //Active definitions
 // `define highres
-//  `define pixel2x2
+ `define pixel2x2
 
 //=======================================================
 // TOP/All Module Parameters
